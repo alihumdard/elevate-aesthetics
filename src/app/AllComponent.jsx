@@ -27,7 +27,7 @@ export default function ElevateAesthetics() {
       />
       <FreeSession
         title="Your First Session On Us!"
-        subtitle=" <b>FREE FIRST TREATMENT</b> on any areas under $60."
+        subtitle="FREE FIRST TREATMENT on any areas under $60."
       />
       <HairRemoval />
       <Process />

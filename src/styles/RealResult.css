@@ -250,7 +250,7 @@
 .rr-slider-wrap {
   position: relative;
   width: 100%;
-  height: 580px;
+  height: 480px;
   border-radius: 10px;
   overflow: hidden;
   cursor: col-resize;
@@ -272,7 +272,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center;
   display: block;
   pointer-events: none;
 }
@@ -435,5 +435,13 @@
 
 @media (max-width: 480px) {
   .rr-hero-btns { flex-direction: column; gap: 10px; }
-  .rr-hero { height: 200px; }
+  .rr-hero { height: 450px;
+            margin: 0;
+   }
+  .rr-hero-img {
+    object-position: left;
+}
+.rr-results {
+    padding: 12px 0 0px;
+}
 }

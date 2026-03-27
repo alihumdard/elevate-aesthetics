@@ -290,12 +290,20 @@
   .step {
     max-width: 320px;
   }
+  .process-section .section-title {
+    font-size: 32px;
+    padding: 0;
+}
+.process-section .section-subtitle {
+    padding: 0;
+}
 
   .step-arrow {
-    transform: rotate(90deg);
-    padding-top: 0;
-    width: auto;
-    height: 40px;
+   width: 60px;
+        height: 34px;
+        padding-top: 0;
+        transform: rotate(90deg);
+        margin-bottom: 30px;
   }
 
   .process-section { padding: 44px 0 52px; }

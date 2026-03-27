@@ -222,7 +222,7 @@ export default function HairRemoval() {
           </p>
 
           {/* Three-column image grid */}
-          <div className="why-grid">
+          <div className="why-grid differ-clr">
 
             {/* LEFT — single tall image */}
             <div className="why-col-left">

@@ -133,3 +133,36 @@
     padding: 10px 20px;
   }
 }
+
+/* Mobile Menu */
+
+@media (max-width: 860px) {
+
+  .links {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    gap: 18px;
+    display: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .showMenu {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav {
+    position: relative;
+  }
+
+}

@@ -491,7 +491,21 @@
   .packages-section {
     padding: 40px 0 50px;
   }
-
+.packages-section .section-title {
+    
+    font-size: 32px;
+    padding: 12px;
+}
+.packages-section .section-subtitle {
+     
+    margin-bottom: 0px;
+    padding-top: 0;
+}
+.why-section .section-title {
+    margin-bottom: 0px;
+    font-size: 33px;
+    padding: 0;
+}
   .why-section {
     padding: 40px 0 50px;
   }
@@ -505,4 +519,37 @@
   .why-col-right .why-card {
     min-height: 220px;
   }
+
+  .price-table thead th {
+  
+    font-size: 12px;
+}
+.price-table tbody td {
+    font-size: 12px;
+}
+.pkg-price {
+    
+    font-size: 13px;
+}
+.pkg-sessions {
+    
+    font-size: 11px;
+}
+.pkg-old {
+     
+    font-size: 12px;
+}
+}
+
+.differ-clr .why-card-desc {
+    text-align: left;
+    
+    color: #fff !important;
+    font-size: 14px !important;
+}
+.differ-clr .why-card-title {
+    
+    color: #fff !important;
+    font-size: 18px !important;
+    
 }
