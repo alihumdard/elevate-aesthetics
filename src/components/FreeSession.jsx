@@ -1,12 +1,15 @@
 import styles from '@/styles/FreeSession.module.css';
 
-export default function FreeSession() {
+export default function FreeSession({
+  title,
+  subtitle
+}) {
   return (
     <div className={styles.customContainer}>
       <section className={styles.section}>
-      <h2 className={styles.title}>Your First Session On Us!</h2>
+      <h2 className={styles.title}>{title}</h2>
       <p className={styles.subtitle}>
-        <b>FREE FIRST TREATMENT</b> on any areas under $60.
+       {subtitle}
       </p>
     </section>
     </div>

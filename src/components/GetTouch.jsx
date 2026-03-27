@@ -23,7 +23,9 @@ const MAP_EMBED_URL =
 /* ─────────────────────────────────────
    MAIN COMPONENT — GetTouch
 ───────────────────────────────────── */
-export default function GetTouch() {
+export default function GetTouch({
+  intouch
+}) {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -152,7 +154,7 @@ export default function GetTouch() {
               {/* Rounded photo */}
               <img
                 className="gt-hero-img"
-                src="/images/touch.png"
+                src={intouch}
                 alt="Elevate Aesthetics clients"
               />
 

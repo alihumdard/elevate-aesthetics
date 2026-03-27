@@ -1,6 +1,6 @@
 .wrapper {
   position: absolute;
-  bottom: -500px;
+  bottom: -440px;
   left: 50%;
   transform: translateX(-50%);
   width: 850px;
@@ -33,20 +33,18 @@
 }
 
 .badgeInner {
-  width: 120px;
-  height: 45px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: white;
-  border-radius: 50px;
-
-  font-weight: 600;
-  font-size: 14px;
-
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-
-  transform: rotate(90deg); /* keep all straight */
+  background: #86654E38;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    transform: rotate(180deg);
+    box-shadow: 0 8px 20px #00000026;
+    color: #fff;
+    font-weight: 300;
+    border: 1px solid #FFFFFF66;
 }

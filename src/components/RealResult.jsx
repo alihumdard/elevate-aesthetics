@@ -130,7 +130,7 @@ function BeforeAfterSlider() {
       {/* BEFORE image (full) */}
       <div className="rr-slider-before">
         <img
-          src="/images/before.png"
+          src="/images/legs_after.png "
           alt="Before"
         />
       </div>
@@ -141,7 +141,7 @@ function BeforeAfterSlider() {
         style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
       >
         <img
-          src="/images/compare.png"
+          src="/images/legs_before.png"
           alt="After"
         />
       </div>

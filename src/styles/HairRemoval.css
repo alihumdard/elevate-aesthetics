@@ -183,7 +183,7 @@
   border-bottom: 1.5px solid var(--border);
   text-align: left;
   padding: 6px 0;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -202,7 +202,7 @@
 .price-table tbody td {
   color: #000000;
   padding: 8px 0;
-  font-size: 15px;
+  font-size: 19px;
 }
 
 .price-table tbody td:first-child {
@@ -227,7 +227,7 @@
 
 .pkg-price {
   font-weight: 700;
-  font-size: 12.5px;
+  font-size: 18px;
   color: var(--text);
 }
 

@@ -84,7 +84,9 @@ function IconX() {
 /* ─────────────────────────────────────
    MAIN COMPONENT — Footer
 ───────────────────────────────────── */
-export default function Footer() {
+export default function Footer({
+  letterImg
+}) {
   const [email, setEmail] = useState('');
 
   const handleNewsletterSubmit = (e) => {
@@ -104,7 +106,7 @@ export default function Footer() {
         {/* Background image */}
         <img
           className="ft-newsletter-bg"
-          src="/images/in-loop.png"
+          src={letterImg}
           alt="Newsletter background"
         />
 

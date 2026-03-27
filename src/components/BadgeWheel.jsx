@@ -4,18 +4,24 @@ import styles from "../styles/BadgeWheel.module.css";
 
 export default function BadgeWheel() {
   const badges = [
-    "Badge 1",
-    "Badge 2",
-    "Badge 3",
-    "Badge 4",
-    "Badge 5",
-    "Badge 6",
-    "Badge 7",
-    "Badge 8",
-    "Badge 9",
-    "Badge 10",
-    "Badge 11",
-    "Badge 12",
+    "Full Body",
+    "Shouders",
+    "Full Back",
+    "Half Back",
+    "Aereola",
+    "Abdomen",
+    "Tummy Line",
+    "Full Bikini",
+    "Full Legs",
+    "Full Arms",
+    "Half Arms",
+    "Partial Bikini",
+    "Full Face",
+    "Partial Face",
+    "Partial Face",
+    "Upper Lips",
+    "Inner Thighs"
+
   ];
 
   const radius = 200;
@@ -35,7 +41,7 @@ export default function BadgeWheel() {
               }}
             >
               <span className={styles.badgeInner}>
-                {badge}
+               <span className="me-2"><img src="/images/dot.png" alt="" /></span> {badge}
               </span>
             </div>
           );
