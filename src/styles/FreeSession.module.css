@@ -1,0 +1,36 @@
+/* ============================================
+   FreeSession.module.css
+   ============================================ */
+.customContainer{
+  max-width: 1320px;
+  margin: auto;
+}
+.section {
+ background: #354B5E;
+ border-radius: 30px;
+    text-align: center;
+    margin-top: 56px;
+    padding: 50px 24px 50px;
+}
+
+.title {
+  font-family: var(--font-serif);
+    color: #FFFFFF;
+    letter-spacing: .3px;
+    margin-bottom: 10px;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.subtitle {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #CFC4B7;
+  font-weight: 300;
+}
+
+.subtitle b {
+  color: #CFC4B7;
+  font-weight: 600;
+}

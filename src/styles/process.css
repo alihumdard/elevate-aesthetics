@@ -1,0 +1,309 @@
+/* ============================================================
+   Process.css
+   Styles for: Simple Process + Why Choose Elevate sections
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+
+:root {
+  --teal:        #3b4a47;
+  --teal-dark:   #2a3634;
+  --process-bg:  #c8b89a;
+  --why-bg:      #f5f1ed;
+  --card-bg:     #bfaf9b;
+  --white:       #ffffff;
+  --dark:        #1a1a1a;
+  --muted:       #666666;
+  --muted-light: #888888;
+  --border:      #d4c9b8;
+  --font-serif:  'Playfair Display', Georgia, serif;
+  --font-sans:   'Jost', sans-serif;
+}
+
+/* ─────────────────────────────────────
+   SHARED
+───────────────────────────────────── */
+.process-wrapper {
+  font-family: var(--font-sans);
+  color: var(--dark);
+}
+
+.process-wrapper .section-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  text-align: center;
+}
+
+.process-wrapper .section-subtitle {
+  text-align: center;
+  font-weight: 300;
+  color: var(--muted);
+}
+
+/* ─────────────────────────────────────
+   SECTION 1 — SIMPLE PROCESS
+───────────────────────────────────── */
+.process-section {
+ background: #CFC4B7;
+  padding: 25px 0 0px;
+}
+
+.process-section .section-title {
+  color: #000000;
+    margin-bottom: 10px;
+    font-size: 48px;
+}
+
+.process-section .section-subtitle {
+  font-size: 18px;
+  margin-bottom: 52px;
+  color: #000000;
+}
+
+/* ── Steps row ── */
+.steps-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  position: relative;
+  margin-bottom: 48px;
+}
+
+/* Individual step */
+.step {
+  flex: 1;
+  max-width: 240px;
+  text-align: center;
+  padding: 0 16px;
+  position: relative;
+}
+
+/* Step number */
+.step-number {
+    font-family: "GFS Didot", serif;
+    color: #354B5E;
+    margin-bottom: 10px;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+}
+
+/* Step label */
+.step-label {
+ letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Manrope", sans-serif !important;
+}
+
+/* Step description */
+.step-desc {
+ color: #000000;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.75;
+}
+
+/* ── Curved arrows between steps ── */
+.step-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 28px;
+  flex-shrink: 0;
+  width: 60px;
+}
+.CustomContainer{
+  max-width: 1320px !important;
+  margin: auto;
+  padding-bottom: 30px;
+}
+/* SVG curved arrow */
+.arrow-svg {
+  width: 52px;
+  height: 36px;
+  overflow: visible;
+}
+
+/* ── Book FREE Session button ── */
+.process-cta-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.process-cta-btn {
+  background: #354B5E;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 32px;
+  padding-right: 8px !important;
+  font-size: 12px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.process-cta-btn:hover {
+   background: #354B5E;
+  transform: translateY(-1px);
+}
+
+.cta-circle {
+ background: #FFFFFF;
+    border-radius: 50%;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    font-size: 15px;
+    font-weight: 300;
+    transition: width .3s;
+    display: flex;
+    color: #000;
+}
+.cta-circle:hover{
+   width: 50px;
+   border-radius: 40px;
+}
+.cta-circle:hover .bookBtn {
+   gap: 10px !important;
+}
+
+/* ─────────────────────────────────────
+   SECTION 2 — WHY CHOOSE ELEVATE
+───────────────────────────────────── */
+.why-choose-section {
+  background: var(--why-bg);
+  padding: 30px 0 0px;
+}
+
+.why-choose-section .section-title {
+  font-size: clamp(26px, 3.2vw, 40px);
+  color: var(--dark);
+  margin-bottom: 14px;
+  line-height: 1.25;
+}
+
+.why-choose-section .section-subtitle {
+  color: #000;
+    max-width: 740px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    line-height: 1.7;
+    padding-top: 0;
+}
+
+/* ── 4 cards row ── */
+.why-cards-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+/* Individual card */
+.why-card {
+ background: #CFC4B7;
+    border-radius: 8px;
+    flex-direction: column;
+   align-items: center;
+    gap: 0;
+    padding: 24px 22px 18px;
+    transition: transform .2s, box-shadow .2s;
+    display: flex;
+    box-shadow: none;
+}
+
+.why-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon wrapper */
+.why-card-icon {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 16px;
+  color: var(--dark);
+  opacity: 0.75;
+}
+
+.why-card-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: var(--dark);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Card title */
+.why-card-title {
+  color: #354B5E !important;
+    margin-bottom: 10px;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 1.35;
+   font-family: "Manrope", sans-serif !important;
+}
+
+/* Card description */
+.why-card-desc {
+  color: #000000 !important;
+    font-size: 14px !important;
+    font-weight: 300 !important;
+    line-height: 1.75;
+    text-align: center;
+}
+
+/* ─────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────── */
+@media (max-width: 991px) {
+  .why-cards-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .steps-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .step {
+    max-width: 320px;
+  }
+
+  .step-arrow {
+    transform: rotate(90deg);
+    padding-top: 0;
+    width: auto;
+    height: 40px;
+  }
+
+  .process-section { padding: 44px 0 52px; }
+  .why-choose-section { padding: 44px 0 52px; }
+}
+
+@media (max-width: 480px) {
+  .why-cards-row {
+    grid-template-columns: 1fr;
+  }
+}

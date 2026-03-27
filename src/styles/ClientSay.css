@@ -1,0 +1,393 @@
+/* ============================================================
+   ClientSay.css
+   Styles for: What Our Clients Say + Laser Hair Removal FAQ
+   Prefix: .cs- to avoid any class conflicts
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap');
+
+:root {
+  --cs-white:       #ffffff;
+  --cs-page-bg:     #f0ece6;
+  --cs-reviews-bg:  #f7f4f0;
+  --cs-faq-bg:      #c8b89a;
+  --cs-dark:        #1a1a1a;
+  --cs-muted:       #888888;
+  --cs-muted2:      #aaaaaa;
+  --cs-teal:        #3b4a47;
+  --cs-teal-dark:   #2a3634;
+  --cs-gold:        #e2a832;
+  --cs-card-bg:     #ffffff;
+  --cs-border:      #e8e2da;
+  --cs-font-serif:  'Playfair Display', Georgia, serif;
+  --cs-font-sans:   'Jost', sans-serif;
+}
+
+/* ─────────────────────────────────────
+   WRAPPER
+───────────────────────────────────── */
+.cs-wrapper {
+  font-family: var(--cs-font-sans);
+  color: var(--cs-dark);
+}
+
+/* Shared section heading styles */
+.cs-section-title {
+  font-family: var(--cs-font-serif);
+  font-weight: 400;
+  text-align: center;
+  color: var(--cs-dark);
+  margin-bottom: 8px;
+}
+
+.cs-section-sub {
+  text-align: center;
+  font-size: 13px;
+  color: var(--cs-muted);
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+/* ═══════════════════════════════════════
+   SECTION 1 — WHAT OUR CLIENTS SAY
+═══════════════════════════════════════ */
+.cs-reviews-section {
+  background: none;
+    padding: 25px 0 58px;
+}
+
+.cs-reviews-section .cs-section-title {
+  font-size: clamp(26px, 3vw, 38px);
+  margin-bottom: 10px;
+}
+
+.cs-reviews-section .cs-section-sub {
+  margin-bottom: 42px;
+}
+
+/* Two-column layout */
+.cs-reviews-layout {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* ── LEFT: image with rating overlay ── */
+.cs-img-col {
+  border-radius: 18px;
+    min-height: 450px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cs-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* Gradient bottom overlay */
+.cs-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 8, 5, 0.72) 0%,
+    rgba(10, 8, 5, 0.08) 55%,
+    transparent 100%
+  );
+}
+
+/* Rating block at bottom */
+.cs-rating-block {
+  position: absolute;
+  bottom: 18px;
+  left: 16px;
+  z-index: 2;
+}
+
+.cs-rating-score {
+  font-family: var(--cs-font-serif);
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--cs-white);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.cs-rating-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 5px;
+}
+
+.cs-star {
+  font-size: 14px;
+  color: var(--cs-gold);
+}
+
+.cs-rating-label {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 1px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+/* ── RIGHT: 2×2 review cards grid ── */
+.cs-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.cs-review-card {
+  background: #E9E4DF;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 18px 18px 16px;
+    transition: box-shadow .2s;
+    display: flex;
+    box-shadow: 0px 0px 32px 0px #00000033 !important;
+}
+
+.cs-review-card:hover {
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10);
+}
+
+/* Review text */
+.cs-review-text {
+  color: #000000;
+    flex: 1;
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.72;
+}
+
+/* Quote mark */
+.cs-review-text::before {
+  content: '"';
+  font-family: var(--cs-font-serif);
+  font-size: 18px;
+  color: var(--cs-muted2);
+  line-height: 0;
+  vertical-align: -4px;
+  margin-right: 2px;
+}
+
+.cs-review-text::after {
+  content: '"';
+  font-family: var(--cs-font-serif);
+  font-size: 18px;
+  color: var(--cs-muted2);
+  line-height: 0;
+  vertical-align: -4px;
+  margin-left: 2px;
+}
+
+/* Reviewer footer */
+.cs-reviewer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cs-reviewer-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Avatar circle */
+.cs-avatar {
+ width: 45px;
+    height: 45px;
+    color: var(--cs-white);
+    text-transform: uppercase;
+    border-radius: 50%;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 300;
+    display: flex;
+}
+
+.cs-avatar-m { background: #5a7a6a; }
+.cs-avatar-k { background: #6a7a9a; }
+.cs-avatar-kb{ background: #8a6a5a; }
+.cs-avatar-l { background: #7a6a8a; }
+
+.cs-reviewer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.cs-reviewer-name {
+ color: #000000;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.cs-reviewer-date {
+  color: #7F9AA8;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+/* Star rating on card */
+.cs-card-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.cs-card-star {
+  color: #E2A53B;
+    font-size: 20px;
+}
+
+/* ═══════════════════════════════════════
+   SECTION 2 — FAQ ACCORDION
+═══════════════════════════════════════ */
+.cs-faq-section {
+ background: #CFC4B7;
+    padding: 30px 0 30px;
+}
+
+.cs-faq-section .cs-section-title {
+ margin-bottom: 10px;
+    font-size: 42px;
+    color: #000000;
+}
+
+.cs-faq-section .cs-section-sub {
+  text-align: center;
+    color: #000000 !important;
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Accordion list */
+.cs-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* Single FAQ item */
+.cs-faq-item {
+  background: var(--cs-white);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+/* FAQ header row */
+.cs-faq-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s;
+  gap: 16px;
+}
+
+.cs-faq-header:hover {
+  background: #faf8f5;
+}
+
+.cs-faq-question {
+  color: #000000;
+    flex: 1;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Circle +/− toggle button */
+.cs-faq-toggle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid #354B5E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--cs-dark);
+  line-height: 1;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+/* Open state: dark filled circle with white minus */
+.cs-faq-item.cs-faq-open .cs-faq-toggle {
+  background: #354B5E;
+    color: var(--cs-white);
+    border-color: #354B5E;
+}
+
+/* FAQ answer body */
+.cs-faq-body {
+ color: #000000;
+    border-top: 1px solid var(--cs-border);
+    padding: 14px 20px 16px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.75;
+    animation: .22s csFadeIn;
+}
+.CustomContainer{
+  max-width: 1320px !important;
+  margin: auto;
+  padding: 30px;
+}
+
+@keyframes csFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────── */
+@media (max-width: 991px) {
+  .cs-reviews-layout {
+    grid-template-columns: 160px 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .cs-reviews-layout {
+    grid-template-columns: 1fr;
+  }
+  .cs-img-col {
+    min-height: 220px;
+  }
+  .cs-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .cs-reviews-section { padding: 42px 0 50px; }
+  .cs-faq-section     { padding: 42px 0 50px; }
+}
+
+@media (max-width: 480px) {
+  .cs-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

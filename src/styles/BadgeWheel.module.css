@@ -1,0 +1,52 @@
+.wrapper {
+  position: absolute;
+  bottom: -500px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 850px;
+  height: 850px;
+  z-index: 20;
+  overflow: hidden;   /* prevent outside */
+}
+
+.wheel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  animation: rotateWheel 50s linear infinite;
+}
+
+@keyframes rotateWheel {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0;
+}
+
+.badgeInner {
+  width: 120px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: white;
+  border-radius: 50px;
+
+  font-weight: 600;
+  font-size: 14px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+  transform: rotate(90deg); /* keep all straight */
+}

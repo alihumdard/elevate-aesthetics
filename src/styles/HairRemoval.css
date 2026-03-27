@@ -1,0 +1,508 @@
+/* ============================================================
+   HairRemoval.css
+   Styles for: Laser Hair Removal Packages + Why Choose sections
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+
+:root {
+  --teal: #3b4a47;
+  --teal-dark: #2a3634;
+  --page-bg: #f0ece7;
+  --card-bg: #ffffff;
+  --border: #ddd8d2;
+  --gold: #c9a46a;
+  --muted: #888888;
+  --text: #1a1a1a;
+  --green-light: #eaf3ef;
+  --green-text: #2a6649;
+  --green-border: #c3ddd4;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Jost', sans-serif;
+}
+
+.gfs-didot-regular {
+  font-family: "GFS Didot", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* ─────────────────────────────────────
+   SHARED
+───────────────────────────────────── */
+.hair-removal-wrapper {
+  font-family: "GFS Didot", serif;
+  background: none;
+  color: var(--text);
+}
+
+/* ─────────────────────────────────────
+   SECTION 1 — PACKAGES
+───────────────────────────────────── */
+.packages-section {
+  background: none;
+  padding: 24px 0 0px;
+}
+
+.packages-section .section-title {
+  font-family: "GFS Didot", serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.packages-section .section-subtitle {
+  color: #000000;
+  text-align: center;
+  margin-bottom: 43px;
+  font-size: 16px;
+  padding-top: 0;
+  font-weight: 300;
+}
+
+/* Left column — accordion */
+.packages-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Right column — image */
+.packages-right {
+  position: relative;
+  height: 100%;
+  min-height: 460px;
+}
+
+.packages-img {
+  width: 100%;
+  height: 100%;
+  min-height: 460px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 6px;
+}
+
+/* ── Accordion ── */
+.accord-item {
+  background: #E9E4DF;
+  border: none;
+  margin-bottom: 10px;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px 2px #00000033;
+  border-radius: 12px;
+}
+
+.accord-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s;
+}
+
+.accord-header:hover {
+  background: #f8f5f2;
+}
+
+.accord-header-title {
+  font-size: 11px;
+  letter-spacing: 1.8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text);
+  margin: 0;
+}
+
+.accord-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.accord-body {
+  padding: 0 0px 0px;
+}
+
+.accord-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tableSpace {
+  padding: 0 18px 0px 18px;
+}
+
+.accord-body.open {
+  max-height: 500px;
+  margin-top: 10px;
+}
+
+/* Promo badge */
+.promo-badge {
+  background: #7F9AA8;
+  border: 1px solid var(--green-border);
+  color: #FFFFFF;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 2px;
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 300;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Price table */
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.price-table thead th {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000;
+  border-bottom: 1.5px solid var(--border);
+  text-align: left;
+  padding: 6px 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.price-table thead th:not(:first-child) {
+  text-align: right;
+}
+
+.price-table tbody tr {
+  border-bottom: 1px solid #ece8e3;
+}
+
+.price-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.price-table tbody td {
+  color: #000000;
+  padding: 8px 0;
+  font-size: 15px;
+}
+
+.price-table tbody td:first-child {
+  font-weight: 500;
+}
+
+.td-single {
+  text-align: right;
+  color: var(--muted);
+}
+
+.td-pkg {
+  text-align: right;
+}
+
+.pkg-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1px;
+}
+
+.pkg-price {
+  font-weight: 700;
+  font-size: 12.5px;
+  color: var(--text);
+}
+
+.pkg-sessions {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.pkg-old {
+  color: #BE2323;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+/* CTA Button */
+.cta-btn {
+  background: #354B5E !important;
+  color: #fff;
+  width: 100%;
+  font-size: 12px;
+  font-family: var(--font-sans);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  border-radius: 35px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 6px 24px;
+  padding-right: 8px !important;
+  font-weight: 500;
+  transition: background .2s;
+  display: flex;
+}
+
+.cta-btn:hover {
+  background: var(--teal);
+}
+
+.cta-arrow {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.big-cta {
+  width: 90px !important;
+  border-radius: 33px !important;
+  font-size: 28px !important;
+}
+
+.big-cta:hover {
+  width: 150px !important;
+
+
+}
+
+/* ─────────────────────────────────────
+   SECTION 2 — WHY CHOOSE
+───────────────────────────────────── */
+.why-section {
+  background: none;
+ padding: 25px 0 40px;
+}
+
+.why-section .section-title {
+  font-family: "GFS Didot", serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.why-section .section-subtitle {
+  color: #000000;
+  text-align: center;
+  max-width: 530px;
+  margin-bottom: 44px;
+  margin-left: auto;
+  padding-top: 0;
+  margin-right: auto;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+/* ── Image cards grid ── */
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  align-items: stretch;
+}
+
+/* Left column — single tall image */
+.why-col-left {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Center column — two stacked images */
+.why-col-center {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Right column — single tall image */
+.why-col-right {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Individual image card */
+.why-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  flex: 1;
+  border-radius: 33px;
+  box-shadow: 0px 0px 14px 2px gray;
+}
+
+.why-col-left .why-card .why-card-icon{
+  width: 25px !important;
+    height: 29px !important;
+}
+.why-col-right .why-card .why-card-icon{
+  width: 25px !important;
+    height: 32px !important;
+}
+.why-col-center .why-card .why-card-icon{
+  width: 25px !important;
+    height: 25px !important;
+}
+
+.why-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+  transform: scale(1.04);
+
+}
+.why-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#0000 0%, #000000b3 100%);
+}
+.why-card-icon {
+    opacity: 1 !important;
+}
+.why-card-title {
+    color: #FFFFFF !important;
+    font-size: 22px !important;
+    font-weight: 300 !important;
+    line-height: 1.35;
+}
+.why-card-desc {
+    color: #ffff !important;
+    font-size: 15px !important;
+    font-weight: 300 !important;
+    line-height: 1.75;
+}
+
+.why-card:hover img {
+  transform: scale(1.04);
+}
+
+/* Fixed heights */
+.why-col-left .why-card {
+  max-height: 490px;
+  background: none !important;
+  padding: 0px !important;
+}
+.customContainer{
+  max-width: 1320px !important;
+  margin: auto;
+}
+
+.why-col-center .why-card {
+  max-height: 240px;
+  background: none !important;
+  padding: 0px !important;
+}
+
+.why-col-right .why-card {
+  
+  max-height: 490px;
+  background: none !important;
+  padding: 0px !important;
+}
+
+
+/* Card info at bottom */
+.why-card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 16px 18px;
+  z-index: 2;
+}
+
+.why-card-icon {
+  font-size: 18px;
+  margin-bottom: 6px;
+  display: block;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.why-card-title {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+
+.why-card-desc {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+/* ─────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────── */
+@media (max-width: 991px) {
+  .packages-right {
+    margin-top: 32px;
+    min-height: 300px;
+  }
+
+  .packages-img {
+    min-height: 300px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .why-col-right {
+    grid-column: 1 / -1;
+  }
+
+  .why-col-right .why-card {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .packages-section {
+    padding: 40px 0 50px;
+  }
+
+  .why-section {
+    padding: 40px 0 50px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-col-left .why-card,
+  .why-col-center .why-card,
+  .why-col-right .why-card {
+    min-height: 220px;
+  }
+}

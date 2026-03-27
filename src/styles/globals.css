@@ -1,0 +1,60 @@
+/* ============================================
+   globals.css — Base reset & CSS variables
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap');
+
+:root {
+  --teal:        #3b4a47;
+  --teal-dark:   #2a3634;
+  --teal-light:  #4d6460;
+  --cream:       #f5f1ed;
+  --white:       #ffffff;
+  --dark:        #1a1a1a;
+  --text-muted:  #888888;
+  --border:      #ddd8d2;
+  --gold:        #c9a46a;
+  --gold-light:  #e8d4a8;
+  --font-serif:  'Playfair Display', Georgia, serif;
+  --font-sans:   'Jost', sans-serif;
+  --hero-radius: 32px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: #eae6e1;
+  color: var(--dark);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-sans);
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,135 @@
+/* ============================================
+   Navbar.module.css
+   ============================================ */
+
+.nav {
+       background: #e9e4dfa8;
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1320px;
+    margin: auto;
+    padding: 10px 36px;
+    display: flex;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 1px 8px #00000024;
+    border-radius: 40px;
+    margin-top: 15px;
+    margin-bottom: 12px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 2px;
+}
+
+.logoMain {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--dark);
+}
+
+.logoSub {
+  font-size: 7.5px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+/* Nav links */
+.links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 0;
+}
+
+.links a {
+  letter-spacing: .4px;
+    color: #2F2F2F !important;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color .2s;
+}
+
+.links a:hover {
+  color: var(--teal);
+}
+
+.links a.active {
+  color: var(--dark);
+  font-weight: 500;
+  border-bottom: 1.5px solid var(--teal);
+  padding-bottom: 1px;
+}
+
+/* Book button */
+.bookBtn {
+ background: #354B5E;
+    color: #ffff;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    border-radius: 3px;
+    padding: 10px 20px;
+    padding-left: 10px !important;
+    font-size: 14px;
+    font-weight: 300;
+    transition: background .2s, transform .15s;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    position: sticky;
+    width: 225px;
+}
+.cta-circle:hover .bookBtn {
+   gap: 10px !important;
+}
+
+.bookBtn:hover {
+  background: #354B5E;
+  transform: translateY(-1px);
+}
+
+/* Right controls */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.searchIcon {
+  font-size: 46px;
+  color: #555;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Mobile hamburger */
+.hamburger {
+  display: none;
+  font-size: 22px;
+  color: var(--dark);
+}
+
+@media (max-width: 860px) {
+  .links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .nav {
+    padding: 10px 20px;
+  }
+}
