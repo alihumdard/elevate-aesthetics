@@ -54,6 +54,10 @@
   margin-bottom: 10px;
   font-size: 48px;
 }
+.process-cta-btn:hover .cta-circle{
+  width: 80px !important;
+  border-radius: 33px;
+}
 
 .process-section .section-subtitle {
   font-size: 18px;

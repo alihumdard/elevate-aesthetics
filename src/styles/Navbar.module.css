@@ -97,6 +97,10 @@
   position: sticky;
   width: 225px;
 }
+.bookBtn:hover :global(.cta-circle) {
+  border-radius: 40px;
+  width: 50px;
+}
 .cta-circle:hover .bookBtn {
   gap: 10px !important;
 }

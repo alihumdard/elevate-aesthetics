@@ -144,7 +144,7 @@ export default function LaserHairRemovalPackages() {
           Choose single sessions or save with packages.
         </p>
 
-        <div className="row g-4 align-items-start">
+        <div className="row g-4">
           {/* LEFT */}
           <div className="col-lg-6 col-12">
             <div className="packages-left">

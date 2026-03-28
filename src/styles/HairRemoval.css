@@ -86,12 +86,15 @@
 
 /* ── Accordion ── */
 .accord-item {
-  background: #e9e4df;
+  background: none;
   border: none;
   margin-bottom: 10px;
   overflow: hidden;
   box-shadow: 1px 1px 5px 2px #00000033;
   border-radius: 12px;
+   display: flex;
+  flex-direction: column;
+  gap: 15px;   
 }
 
 .accord-header {
@@ -102,6 +105,8 @@
   cursor: pointer;
   user-select: none;
   transition: background 0.15s;
+  box-shadow: 0px 0px  10px 0px #00000033;
+  border-radius: 14px;
 }
 
 .accord-header:hover {
@@ -148,8 +153,11 @@
 }
 
 .accord-body.open {
-  max-height: 500px;
-  margin-top: 10px;
+ max-height: 500px;
+    margin-top: 10px;
+    /* background: red; */
+    border-radius: 14px;
+    box-shadow: 0px 0px 12px 0px #00000033;
 }
 
 /* Promo badge */
@@ -546,4 +554,7 @@
 .differ-clr .why-card-title {
   color: #fff !important;
   font-size: 18px !important;
+}
+.cta-btn:hover .big-cta {
+  width: 170px !important;
 }

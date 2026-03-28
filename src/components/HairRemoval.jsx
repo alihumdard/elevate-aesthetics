@@ -182,12 +182,12 @@ export default function HairRemoval() {
                   defaultOpen={false}
                 />
                 <button className="cta-btn">
-                  Book Your Free Treatment Now
-                  <span className="cta-circle big-cta">
-      <span className="cta-bg"></span>
-      <span className="arrow">→</span>
-    </span>
-                </button>
+  Book Your Free Treatment Now
+  <span className="cta-circle big-cta">
+    <span className="cta-bg"></span>
+    <span className="arrow">→</span>
+  </span>
+</button>
               </div>
             </div>
 

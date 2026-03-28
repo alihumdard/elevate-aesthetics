@@ -164,7 +164,10 @@
   border-image: linear-gradient(293deg, #FFFFFF 0%, #FFFFFF80 50%, #FFFFFF00 100%) 1;
 }
 
- 
+.rr-btn-primary:hover .rr-btn-arrow{
+  width: 70px;
+  border-radius: 33px;
+}
 
 .rr-btn-outline {
   position: relative;
