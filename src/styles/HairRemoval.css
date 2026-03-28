@@ -3,7 +3,7 @@
    Styles for: Laser Hair Removal Packages + Why Choose sections
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap");
 
 :root {
   --teal: #3b4a47;
@@ -17,8 +17,8 @@
   --green-light: #eaf3ef;
   --green-text: #2a6649;
   --green-border: #c3ddd4;
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-sans: 'Jost', sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Jost", sans-serif;
 }
 
 .gfs-didot-regular {
@@ -26,7 +26,6 @@
   font-weight: 400;
   font-style: normal;
 }
-
 
 /* ─────────────────────────────────────
    SHARED
@@ -88,7 +87,7 @@
 
 /* ── Accordion ── */
 .accord-item {
-  background: #E9E4DF;
+  background: #e9e4df;
   border: none;
   margin-bottom: 10px;
   overflow: hidden;
@@ -155,10 +154,10 @@
 
 /* Promo badge */
 .promo-badge {
-  background: #7F9AA8;
+  background: #7f9aa8;
   border: 1px solid var(--green-border);
-  color: #FFFFFF;
-  letter-spacing: .8px;
+  color: #ffffff;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
   text-align: center;
   border-radius: 2px;
@@ -230,22 +229,26 @@
   font-size: 18px;
   color: var(--text);
 }
-
 .pkg-sessions {
+  color: #be2323;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+.pkg-sessions2 {
   color: #000000;
   font-size: 14px;
   font-weight: 400;
 }
 
 .pkg-old {
-  color: #BE2323;
+  color: #be2323;
   font-size: 14px;
   text-decoration: line-through;
 }
 
 /* CTA Button */
 .cta-btn {
-  background: #354B5E !important;
+  background: #354b5e !important;
   color: #fff;
   width: 100%;
   font-size: 12px;
@@ -261,7 +264,7 @@
   padding: 6px 24px;
   padding-right: 8px !important;
   font-weight: 500;
-  transition: background .2s;
+  transition: background 0.2s;
   display: flex;
 }
 
@@ -282,8 +285,6 @@
 
 .big-cta:hover {
   width: 150px !important;
-
-
 }
 
 /* ─────────────────────────────────────
@@ -291,7 +292,7 @@
 ───────────────────────────────────── */
 .why-section {
   background: none;
- padding: 25px 0 40px;
+  padding: 25px 0 40px;
 }
 
 .why-section .section-title {
@@ -353,17 +354,17 @@
   box-shadow: 0px 0px 14px 2px gray;
 }
 
-.why-col-left .why-card .why-card-icon{
+.why-col-left .why-card .why-card-icon {
   width: 25px !important;
-    height: 29px !important;
+  height: 29px !important;
 }
-.why-col-right .why-card .why-card-icon{
+.why-col-right .why-card .why-card-icon {
   width: 25px !important;
-    height: 32px !important;
+  height: 32px !important;
 }
-.why-col-center .why-card .why-card-icon{
+.why-col-center .why-card .why-card-icon {
   width: 25px !important;
-    height: 25px !important;
+  height: 25px !important;
 }
 
 .why-card img {
@@ -373,7 +374,6 @@
   display: block;
   transition: transform 0.4s ease;
   transform: scale(1.04);
-
 }
 .why-overlay {
   position: absolute;
@@ -384,19 +384,19 @@
   background: linear-gradient(#0000 0%, #000000b3 100%);
 }
 .why-card-icon {
-    opacity: 1 !important;
+  opacity: 1 !important;
 }
 .why-card-title {
-    color: #FFFFFF !important;
-    font-size: 22px !important;
-    font-weight: 300 !important;
-    line-height: 1.35;
+  color: #ffffff !important;
+  font-size: 22px !important;
+  font-weight: 300 !important;
+  line-height: 1.35;
 }
 .why-card-desc {
-    color: #ffff !important;
-    font-size: 15px !important;
-    font-weight: 300 !important;
-    line-height: 1.75;
+  color: #ffff !important;
+  font-size: 15px !important;
+  font-weight: 300 !important;
+  line-height: 1.75;
 }
 
 .why-card:hover img {
@@ -409,7 +409,7 @@
   background: none !important;
   padding: 0px !important;
 }
-.customContainer{
+.customContainer {
   max-width: 1320px !important;
   margin: auto;
 }
@@ -421,12 +421,10 @@
 }
 
 .why-col-right .why-card {
-  
   max-height: 490px;
   background: none !important;
   padding: 0px !important;
 }
-
 
 /* Card info at bottom */
 .why-card-info {
@@ -491,21 +489,19 @@
   .packages-section {
     padding: 40px 0 50px;
   }
-.packages-section .section-title {
-    
+  .packages-section .section-title {
     font-size: 32px;
     padding: 12px;
-}
-.packages-section .section-subtitle {
-     
+  }
+  .packages-section .section-subtitle {
     margin-bottom: 0px;
     padding-top: 0;
-}
-.why-section .section-title {
+  }
+  .why-section .section-title {
     margin-bottom: 0px;
     font-size: 33px;
     padding: 0;
-}
+  }
   .why-section {
     padding: 40px 0 50px;
   }
@@ -521,35 +517,29 @@
   }
 
   .price-table thead th {
-  
     font-size: 12px;
-}
-.price-table tbody td {
+  }
+  .price-table tbody td {
     font-size: 12px;
-}
-.pkg-price {
-    
+  }
+  .pkg-price {
     font-size: 13px;
-}
-.pkg-sessions {
-    
+  }
+  .pkg-sessions {
     font-size: 11px;
-}
-.pkg-old {
-     
+  }
+  .pkg-old {
     font-size: 12px;
-}
+  }
 }
 
 .differ-clr .why-card-desc {
-    text-align: left;
-    
-    color: #fff !important;
-    font-size: 14px !important;
+  text-align: left;
+
+  color: #fff !important;
+  font-size: 14px !important;
 }
 .differ-clr .why-card-title {
-    
-    color: #fff !important;
-    font-size: 18px !important;
-    
+  color: #fff !important;
+  font-size: 18px !important;
 }

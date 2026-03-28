@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState } from "react";
 import styles from "@/styles/Navbar.module.css";
@@ -12,12 +12,10 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className={styles.nav}>
-      
       {/* Logo */}
       <div className={styles.logo}>
         <img
@@ -31,9 +29,7 @@ export default function Navbar() {
       <ul className={`${styles.links} ${menuOpen ? styles.showMenu : ""}`}>
         {navLinks.map((link) => (
           <li key={link.label}>
-            <a href={link.href}>
-              {link.label}
-            </a>
+            <a href={link.href}>{link.label}</a>
           </li>
         ))}
 
@@ -52,14 +48,13 @@ export default function Navbar() {
       <div className={styles.right}>
         <span className={styles.searchIcon}>⌕</span>
 
-        <span 
+        <span
           className={styles.hamburger}
           onClick={() => setMenuOpen(!menuOpen)}
         >
           ☰
         </span>
       </div>
-
     </nav>
   );
 }
