@@ -27,49 +27,22 @@ const whyCards = [
   {
     title: "Experienced Specialists",
     desc: "Our trained professionals ensure safe and precise treatments.",
-    icon: (
-      /* person / specialist icon */
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="12" cy="8" r="4" />
-        <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-        <path d="M15 6.5c.8-.5 1.5-1.4 1.5-2.5" strokeDasharray="2 1" />
-        <path d="M9 6.5c-.8-.5-1.5-1.4-1.5-2.5" strokeDasharray="2 1" />
-      </svg>
-    ),
+    icon:  '/images/card-icon1.png',
   },
   {
     title: "Modern Technology",
     desc: "We use advanced systems for effective and comfortable results.",
-    icon: (
-      /* lightning / tech icon */
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-      </svg>
-    ),
+     icon:  '/images/card-icon3.png',
   },
   {
     title: "Personalized Care",
     desc: "Each treatment is customized for your needs and goals.",
-    icon: (
-      /* heart icon */
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0
-         0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-        />
-      </svg>
-    ),
+    icon:  '/images/card-icon4.png',
   },
   {
     title: "Medical Oversight",
     desc: "Treatments are performed under professional medical supervision.",
-    icon: (
-      /* shield / oversight icon */
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-        <path d="M9 12l2 2 4-4" />
-      </svg>
-    ),
+     icon:  '/images/card-icon2.png',
   },
 ];
 
@@ -159,8 +132,8 @@ export default function Process() {
           {/* 4 Cards */}
           <div className="why-cards-row">
             {whyCards.map((card) => (
-              <div className="why-card" key={card.title}>
-                <div className="why-card-icon">{card.icon}</div>
+              <div className="why-card  process-card" key={card.title}>
+                <div className="why-card-icon"> <img src={card.icon} alt="" /></div>
                 <div className="why-card-title">{card.title}</div>
                 <p className="why-card-desc">{card.desc}</p>
               </div>

@@ -25,7 +25,7 @@ const whyCards = {
   },
 
   right: {
-    src: "/images/skin-treat3.png",
+    src: "/images/skin-treat2.png",
     icon: "/images/right-icon.png",
     title: "Minimal Downtime",
     desc: "Most treatments require little to no recovery time.",

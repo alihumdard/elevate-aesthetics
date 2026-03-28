@@ -158,7 +158,7 @@ export default function LaserHairRemovalPackages() {
 
           {/* RIGHT */}
           <div className="col-lg-6 col-12">
-            <div className="packages-right">
+            <div className="packages-right second-extra">
               <img
                 className="packages-img"
                 src="/images/single-treatment.png"

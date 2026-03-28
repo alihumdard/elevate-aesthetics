@@ -4,7 +4,7 @@ import { useState } from "react";
 import styles from "@/styles/Navbar.module.css";
 
 const navLinks = [
-  { label: "How HR Works", href: "#" },
+  { label: "How HR Works", href: "/" },
   { label: "Packages", href: "/skinRemoval" },
   { label: "Results", href: "#" },
   { label: "FAQ", href: "#" },
