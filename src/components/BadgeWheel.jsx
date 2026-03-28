@@ -4,24 +4,24 @@ import styles from "../styles/BadgeWheel.module.css";
 
 export default function BadgeWheel() {
   const badges = [
-    "Full Body",
-    "Shouders",
-    "Full Back",
-    "Half Back",
-    "Aereola",
-    "Abdomen",
-    "Tummy Line",
-    "Full Bikini",
-    "Full Legs",
-    "Full Arms",
-    "Half Arms",
-    "Partial Bikini",
-    "Full Face",
-    "Partial Face",
-    "Partial Face",
-    "Upper Lips",
-    "Inner Thighs"
-
+    "Dermapeel",
+    "Emsculpt NEO",
+    "Microneedling",
+    "Dermapeel",
+    "Morpheus 8",
+    "Microneedling",
+    "PRF",
+    "Morpheus 8",
+    "Emsculpt NEO",
+    "PRF",
+    "Hair Restoration",
+    "Emsculpt NEO",
+    "PRF EZ Gel",
+    "Hair Restoration",
+    "Dermapeel",
+    "PRF EZ Gel",
+    "Microneedling",
+    "Morpheus 8",
   ];
 
   const radius = 200;
@@ -37,11 +37,14 @@ export default function BadgeWheel() {
               key={index}
               className={styles.badge}
               style={{
-                transform: `rotate(${angle}deg) translate(${radius}px)`
+                transform: `rotate(${angle}deg) translate(${radius}px)`,
               }}
             >
               <span className={styles.badgeInner}>
-               <span className="me-2"><img src="/images/dot.png" alt="" /></span> {badge}
+                <span className="me-2">
+                  <img src="/images/dot.png" alt="" />
+                </span>{" "}
+                {badge}
               </span>
             </div>
           );

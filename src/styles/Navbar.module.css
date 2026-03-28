@@ -3,21 +3,21 @@
    ============================================ */
 
 .nav {
-       background: #e9e4dfa8;
-    border-bottom: 1px solid var(--border);
-    z-index: 1000;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1320px;
-    margin: auto;
-    padding: 10px 36px;
-    display: flex;
-    position: sticky;
-    top: 0;
-    box-shadow: 0 1px 8px #00000024;
-    border-radius: 40px;
-    margin-top: 15px;
-    margin-bottom: 12px;
+  background: #e9e4dfa8;
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1320px;
+  margin: auto;
+  padding: 10px 36px;
+  display: flex;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 1px 8px #00000024;
+  border-radius: 40px;
+  margin-top: 15px;
+  margin-bottom: 12px;
 }
 
 /* Logo */
@@ -54,12 +54,12 @@
 }
 
 .links a {
-  letter-spacing: .4px;
-    color: #2F2F2F !important;
-    white-space: nowrap;
-    font-size: 16px;
-    font-weight: 500;
-    transition: color .2s;
+  letter-spacing: 0.4px;
+  color: #2f2f2f !important;
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
 .links a:hover {
@@ -75,29 +75,31 @@
 
 /* Book button */
 .bookBtn {
- background: #354B5E;
-    color: #ffff;
-    letter-spacing: 1px;
-    white-space: nowrap;
-    border-radius: 3px;
-    padding: 10px 20px;
-    padding-left: 10px !important;
-    font-size: 14px;
-    font-weight: 300;
-    transition: background .2s, transform .15s;
-    border-radius: 40px;
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    position: sticky;
-    width: 225px;
+  background: #354b5e;
+  color: #ffff;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  border-radius: 3px;
+  padding: 10px 20px;
+  padding-left: 10px !important;
+  font-size: 14px;
+  font-weight: 300;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  position: sticky;
+  width: 225px;
 }
 .cta-circle:hover .bookBtn {
-   gap: 10px !important;
+  gap: 10px !important;
 }
 
 .bookBtn:hover {
-  background: #354B5E;
+  background: #354b5e;
   transform: translateY(-1px);
 }
 
@@ -137,7 +139,6 @@
 /* Mobile Menu */
 
 @media (max-width: 860px) {
-
   .links {
     position: absolute;
     top: 80px;
@@ -149,7 +150,7 @@
     gap: 18px;
     display: none;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
 
   .showMenu {
@@ -164,5 +165,4 @@
   .nav {
     position: relative;
   }
-
 }

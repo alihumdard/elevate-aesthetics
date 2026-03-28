@@ -1,35 +1,35 @@
-'use client';
+"use client";
 
 import "../styles/HairRemoval.css";
 
 const whyCards = {
   left: {
-    src: '/images/skin-treat1.png',
-    icon: '/images/left-icon.svg',
-    title: 'Safe & Effective Technology',
-    desc: 'Performed by trained professionals using advanced laser systems.',
+    src: "/images/skin-treat1.png",
+    icon: "/images/left-icon.svg",
+    title: "Visible Results",
+    desc: "See noticeable improvements in your skin and body after just a few sessions.",
   },
 
   centerTop: {
-    src: '/images/laser-removal-center-top.png',
-    icon: '/images/center-top.png',
-    title: 'Long-Lasting Results',
-    desc: 'Laser technology targets hair follicles.'
+    src: "/images/laser-removal-center-top.png",
+    icon: "/images/center-top.png",
+    title: "Advanced Technology",
+    desc: "We use modern, clinically proven devices for safe and effective treatments.",
   },
 
   centerBottom: {
-    src: '/images/skin-treat2.png',
-    icon: '/images/center-bottom.png',
-    title: 'Save Time & Money',
-    desc: 'No more constant shaving.'
+    src: "/images/skin-treat2.png",
+    icon: "/images/center-bottom.png",
+    title: "Customized Treatments",
+    desc: "Every treatment is tailored to your skin type and goals.",
   },
 
   right: {
-    src: '/images/skin-treat3.png',
-    icon: '/images/right-icon.png',
-    title: 'Smooth Skin',
-    desc: 'Enjoy silky-smooth skin.'
-  }
+    src: "/images/skin-treat3.png",
+    icon: "/images/right-icon.png",
+    title: "Minimal Downtime",
+    desc: "Most treatments require little to no recovery time.",
+  },
 };
 
 function WhyCard({ card }) {
@@ -51,18 +51,16 @@ export default function WhyChooseLaserHairRemoval() {
   return (
     <section className="why-section">
       <div className="container customContainer">
-
         <h2 className="why-section section-title">
-          Why Choose Laser Hair Removal?
+          Why Choose Our Skin & Body Treatments?
         </h2>
 
         <p className="why-section section-subtitle">
-          Laser hair removal offers a safe and effective way to reduce
-          unwanted hair and enjoy smoother skin.
+          Our treatments are designed to improve skin texture, boost collagen,
+          and enhance your natural beauty with safe and effective methods.
         </p>
 
         <div className="why-grid">
-
           <div className="why-col-left">
             <WhyCard card={whyCards.left} />
           </div>
@@ -75,9 +73,7 @@ export default function WhyChooseLaserHairRemoval() {
           <div className="why-col-right">
             <WhyCard card={whyCards.right} />
           </div>
-
         </div>
-
       </div>
     </section>
   );
