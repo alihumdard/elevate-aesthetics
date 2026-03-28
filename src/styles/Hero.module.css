@@ -39,7 +39,7 @@
 /* ── Centered heading text ── */
 .heroText {
   position: absolute;
-  top: 13%;
+  top: 6%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -51,21 +51,25 @@
 
 .heroText h1 {
   font-family: var(--font-serif);
-  color: #FFFFFF;
-  text-shadow: 0 2px 16px #00000059;
-  letter-spacing: .3px;
-  margin-bottom: 12px;
-  font-size: 46px;
-  font-weight: 500;
-  line-height: 1.18;
+    color: #fff;
+    text-shadow: 0 2px 16px #00000059;
+    letter-spacing: .3px;
+    margin-bottom: 12px;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.18;
+    max-width: 800px;
+    margin: auto;
 }
 
 .heroText p {
   color: #fff;
   letter-spacing: .2px;
-  font-size: 23px;
+  font-size: 18px;
   font-weight: 100;
   line-height: 1.5;
+  max-width: 700px;
+  margin: auto;
 }
 
 
@@ -124,7 +128,13 @@
   max-width: 1320px;
   margin: auto;
 }
-
+#book-id .cta-circle-clr{
+  background: #354B5E !important;
+  color: #FFFFFF !important;
+}
+#book-id .cta-circle-clr .arrow{
+  color: #fff !important;
+}
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .hero {

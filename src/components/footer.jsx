@@ -8,22 +8,22 @@ import "../styles/footer.css";
 ───────────────────────────────────── */
 const contactItems = [
   {
-    icon: "📍",
+    icon: "/images/location.png",
     text: "509 1/2 E. Broadway, Glendale, CA 91205",
   },
   {
-    icon: "📞",
+    icon: "/images/phone.png",
     text: "(818) 855-8403",
   },
   {
-    icon: "✉",
+    icon: "/images/at.png",
     text: "hello@elevateaesthetics.la",
   },
 ];
 
 const navLinks = [
-  { label: "Treatments", href: "#" },
-  { label: "Pricing", href: "#" },
+  { label: "How LHR Works", href: "#" },
+  { label: "Packages", href: "#" },
   { label: "Results", href: "#" },
   { label: "FAQ", href: "#" },
   { label: "Contact", href: "#" },
@@ -172,7 +172,7 @@ export default function Footer({ letterImg }) {
               <div className="ft-contact-list">
                 {contactItems.map((item, i) => (
                   <div key={i} className="ft-contact-item">
-                    <span className="ft-contact-icon">{item.icon}</span>
+                    <span className="ft-contact-icon"><img src={item.icon} alt="" /></span>
                     <span>{item.text}</span>
                   </div>
                 ))}

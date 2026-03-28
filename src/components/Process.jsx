@@ -164,7 +164,7 @@ export default function Process() {
           {/* 4 Cards */}
           <div className="why-cards-row">
             {whyCards.map((card) => (
-              <div className="why-card" key={card.title}>
+              <div className="why-card process-card" key={card.title}>
                 <div className="why-card-icon">
                   {card.icon}
                 </div>

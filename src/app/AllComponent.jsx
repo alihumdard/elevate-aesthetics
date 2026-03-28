@@ -26,9 +26,13 @@ export default function ElevateAesthetics() {
         buttonText="Book Now"
       />
       <FreeSession
-        title="Your First Session On Us!"
-        subtitle="FREE FIRST TREATMENT on any areas under $60."
-      />
+  title="Your First Session On Us!"
+  subtitle={
+    <>
+      <b>FREE FIRST TREATMENT</b> on any areas under $60.
+    </>
+  }
+/>
       <HairRemoval />
       <Process />
       <RealResult />

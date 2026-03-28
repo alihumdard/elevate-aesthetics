@@ -158,11 +158,14 @@ function BeforeAfterSlider() {
 
       {/* Drag handle */}
       <div
-        className="rr-slider-handle"
-        style={{ left: `${position}%` }}
-      >
-        <span className="rr-handle-arrows">‹›</span>
-      </div>
+  className="rr-slider-handle"
+  style={{ left: `${position}%` }}
+>
+  <span className="rr-handle-arrows">
+    <img src="/images/left.png" alt="left" className="arrow-left" />
+    <img src="/images/right.png" alt="right" className="arrow-right" />
+  </span>
+</div>
     </div>
   );
 }

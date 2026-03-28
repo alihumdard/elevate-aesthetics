@@ -33,12 +33,12 @@ export default function Hero({
               src={curveImage}
               alt="curve background"
             />
-            <button className={styles.bookNowBtn}>
-              <span className="cta-circle">
+            <button id="book-id" className={styles.bookNowBtn}>
+              <span id="cta-circle-clr" className="cta-circle cta-circle-clr">
                 <span className="cta-bg"></span>
                 <span className="arrow">→</span>
               </span>
-              {buttonText}
+            <span className="btn-clor">  {buttonText}</span>
             </button>
           </div>
 

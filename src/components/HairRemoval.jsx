@@ -155,7 +155,7 @@ export default function HairRemoval() {
           SECTION 1 — LASER PACKAGES
       ══════════════════════════════════ */}
       <section className="packages-section">
-        <div className="container customContainer">
+        <div className="container ">
 
           {/* Top heading */}
           <h2 className="packages-section section-title">
@@ -166,7 +166,7 @@ export default function HairRemoval() {
           </p>
 
           {/* Two-column layout: table left, image right */}
-          <div className="row g-4 align-items-start">
+          <div className="row g-4">
 
             {/* LEFT — accordion + CTA */}
             <div className="col-lg-6 col-12">

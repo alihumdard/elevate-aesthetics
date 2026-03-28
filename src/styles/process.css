@@ -59,6 +59,7 @@
   font-size: 18px;
   margin-bottom: 52px;
   color: #000000;
+  padding-top: 0;
 }
 
 /* ── Steps row ── */
@@ -74,7 +75,7 @@
 /* Individual step */
 .step {
   flex: 1;
-  max-width: 240px;
+      max-width: none;
   text-align: center;
   padding: 0 16px;
   position: relative;
@@ -97,27 +98,29 @@
   text-transform: uppercase;
   color: #000000;
   margin-bottom: 12px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   font-family: "Manrope", sans-serif !important;
 }
 
 /* Step description */
 .step-desc {
-  color: #000000;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.75;
+  color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.75;
+    max-width: 206px;
+    margin: auto;
 }
 
 /* ── Curved arrows between steps ── */
 .step-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 28px;
   flex-shrink: 0;
-  width: 60px;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    padding-top: 8%;
+    display: flex;
 }
 .CustomContainer {
   max-width: 1320px !important;
@@ -175,6 +178,13 @@
   transition: width 0.3s;
   display: flex;
   color: #000;
+}
+#book-id .cta-circle-clr{
+  background: #354B5E !important;
+  color: #fff !important;
+}
+#book-id .btn-clor{
+  color: #354B5E;
 }
 .cta-circle:hover {
   width: 50px;
@@ -322,4 +332,14 @@
   .why-cards-row {
     grid-template-columns: 1fr;
   }
+}
+
+.process-card .why-card-icon svg {
+    stroke: #354B5E !important;
+}
+.process-card  .why-card-desc {
+    text-align: center;
+    color: #000000;
+    font-size: 16px !important;
+    font-weight: 500 !important;
 }
