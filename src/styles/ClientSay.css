@@ -293,7 +293,7 @@
 .cs-faq-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 18px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -340,9 +340,10 @@
   flex-shrink: 0;
   font-size: 18px;
   font-weight: 300;
-  color: var(--cs-dark);
+  color: #fff;
   line-height: 1;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
+  background: #354b5e;
 }
 
 /* Open state: dark filled circle with white minus */

@@ -169,8 +169,8 @@ export default function HairRemoval() {
           <div className="row g-5">
 
             {/* LEFT — accordion + CTA */}
-            <div className="col-lg-6 col-12">
-              <div className="packages-left">
+            <div className="col-lg-7 col-12">
+              <div className="packages-left adjust-width">
                 <Accordion
                   label="WOMEN'S LASER HAIR REMOVAL"
                   rows={womenRows}
@@ -190,12 +190,11 @@ export default function HairRemoval() {
 </button>
               </div>
             </div>
-
             {/* RIGHT — image */}
-            <div className="col-lg-6 col-12">
+            <div className="col-lg-5 col-12">
               <div className="packages-right">
                 <img
-                  className="packages-img"
+                  className="packages-img packages-width"
                   src="/images/hair-removal.png"
                   alt="Laser hair removal model"
                 />

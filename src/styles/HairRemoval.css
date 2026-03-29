@@ -83,6 +83,13 @@
   object-position: center top;
   border-radius: 6px;
 }
+.packages-width{
+  object-fit: cover;
+  object-position: top;
+}
+.adjust-width{
+  max-width: 92%;
+}
 
 /* ── Accordion ── */
 .accord-item {
