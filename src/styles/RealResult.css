@@ -444,7 +444,7 @@
   .rr-hero { height: 220px; }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .rr-hero-btns { flex-direction: column; gap: 10px; }
   .rr-hero { height: 450px;
             margin: 0;
@@ -454,5 +454,13 @@
 }
 .rr-results {
     padding: 12px 0 0px;
+}
+.rr-hero-title {
+    
+    font-size: 35px;
+    
+}
+.rr-hero-sub {
+    font-size: 18px;
 }
 }

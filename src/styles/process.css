@@ -388,3 +388,14 @@
     font-size: 16px !important;
     font-weight: 500 !important;
 }
+@media only screen and (max-width:600px) {
+  .why-choose-section .section-title {
+     
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0;
+}
+.why-choose-section .section-subtitle {
+    padding-bottom: 0px;
+}
+}

@@ -333,5 +333,6 @@
   .ft-newsletter-card {
     padding: 22px 22px 20px;
   }
-  .ft-footer { padding: 36px 0 0; }
+  .ft-footer { padding: 36px 0 0;
+  padding-left: 22px; }
 }

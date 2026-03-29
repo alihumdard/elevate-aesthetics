@@ -544,7 +544,10 @@
   .why-col-left .why-card,
   .why-col-center .why-card,
   .why-col-right .why-card {
-    min-height: 220px;
+    min-height: 220px !important;
+  }
+  .why-card{
+    max-height: 270px !important;
   }
 
   .price-table thead th {
@@ -577,4 +580,23 @@
 }
 .cta-btn:hover .big-cta {
   width: 170px !important;
+}
+
+@media only screen and (max-width:600px){
+  .adjust-width {
+    max-width: 100%;
+    margin: auto;
+}
+.accord-header-title {
+    font-size: 14px;
+}
+.cta-btn:hover .big-cta {
+    width: 90px !important;
+}
+.cta-btn{
+  padding: 10px 16px;
+}
+.why-section .section-subtitle{
+  padding-bottom: 0px;
+}
 }
