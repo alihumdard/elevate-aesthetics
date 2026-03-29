@@ -409,4 +409,7 @@
   .gt-contact-section {
     padding: 36px 0 40px;
   }
+  .gt-form-col {
+    padding: 0 12px;
+}
 }
