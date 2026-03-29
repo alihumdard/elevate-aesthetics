@@ -18,7 +18,7 @@ import WhyChooseLaserHairRemoval from '@/components/WhyChooseLaserHairRemoval';
 ══════════════════════════════════════ */
 export default function ElevateAesthetics() {
   return (
-    <main>
+    <>
       <TopBanner />
       <Navbar />
       <Hero
@@ -43,6 +43,6 @@ export default function ElevateAesthetics() {
       <HairClientSay />
       <GetTouch intouch = "/images/contact.png"/>
       <Footer  letterImg = "/images/footer.png"/> 
-    </main>
+    </>
   );
 }

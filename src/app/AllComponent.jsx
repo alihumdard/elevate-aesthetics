@@ -16,7 +16,7 @@ import Footer from "@/components/footer";
 ══════════════════════════════════════ */
 export default function ElevateAesthetics() {
   return (
-    <main>
+    <>
       <TopBanner />
       <Navbar />
       <Hero
@@ -39,6 +39,6 @@ export default function ElevateAesthetics() {
       <ClientSay />
       <GetTouch  intouch = "/images/touch.png"/>
       <Footer  letterImg = "/images/in-loop.png"/>
-    </main>
+    </>
   );
 }
