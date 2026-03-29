@@ -10,8 +10,9 @@
 }
 
 .subtitle {
-  color: #666;
-  font-size: 16px;
+     color: #000;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .imageWrapper img {

@@ -75,10 +75,11 @@
 }
 
 .process-section .section-subtitle {
-  font-size: 18px;
-  margin-bottom: 52px;
-  color: #000000;
-  padding-top: 0;
+ color: #000;
+    margin-bottom: 52px;
+    padding-top: 0;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 /* ── Steps row ── */
@@ -206,7 +207,7 @@
   color: #354B5E;
 }
 .cta-circle:hover {
-  width: 50px;
+     width: 68px;
   border-radius: 40px;
 }
 .cta-circle:hover .bookBtn {
@@ -234,7 +235,8 @@
   margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 16px;
+     font-size: 18px;
+    font-weight: 400;
   line-height: 1.7;
   padding-top: 0;
 }

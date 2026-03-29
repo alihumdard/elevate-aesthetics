@@ -182,7 +182,9 @@
   margin: auto;
   padding-bottom: 30px;
 }
-
+.glow-btn{
+  padding: 10px 45px !important;
+}
 /* gradient border */
 .rr-btn-outline::before {
   content: "";
@@ -231,11 +233,11 @@
 }
 
 .rr-results-sub {
-  font-size: 13px;
-  color: var(--rr-muted);
-  text-align: center;
-  font-weight: 300;
-  margin-bottom: 38px;
+  color: #000;
+    text-align: center;
+    margin-bottom: 38px;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 /* Two-column layout */

@@ -29,7 +29,11 @@ export default function ElevateAesthetics() {
            />
      <FreeSession
              title="Big Glow-up With Bigger Savings!"
-             subtitle=" $450 off Morpheus8 . $300 off Microneedling . $1200 off Emsculpt NEO "
+             subtitle={
+              <>
+              <b> $450 off Morpheus8 . $300 off Microneedling . $1200 off Emsculpt NEO </b>
+              </>
+             }
            />
            <LaserHairRemovalPackages />
       <Popular />

@@ -42,7 +42,7 @@
 /* Two-column: form left, image+card right */
 .gt-contact-layout {
   display: grid;
-  grid-template-columns: 1fr 450px;
+  grid-template-columns: 1fr 475px;
   gap: 32px;
   align-items: start;
 }

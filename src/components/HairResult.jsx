@@ -269,10 +269,13 @@ export default function RealResult() {
             {/* Buttons */}
             <div className="rr-hero-btns">
               {/* Teal pill */}
-              <button className="rr-btn-primary">
-                Start Your Glow
-                <span className="rr-btn-arrow">→</span>
-              </button>
+               
+               <div className="process-cta-wrap">
+            <button className="process-cta-btn glow-btn">
+              Start Your Glow
+              <span className="cta-circle">→</span>
+            </button>
+          </div>
 
               {/* Phone outline pill */}
               <button className="rr-btn-outline">
