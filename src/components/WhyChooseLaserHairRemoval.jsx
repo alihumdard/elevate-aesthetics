@@ -18,7 +18,7 @@ const whyCards = {
   },
 
   centerBottom: {
-    src: "/images/skin-treat2.png",
+    src: "/images/skinn-treat3.png",
     icon: "/images/center-bottom.png",
     title: "Customized Treatments",
     desc: "Every treatment is tailored to your skin type and goals.",
@@ -34,7 +34,7 @@ const whyCards = {
 
 function WhyCard({ card }) {
   return (
-    <div className="why-card">
+    <div className="why-card clr-white-card">
       <img src={card.src} alt={card.title} />
       <div className="why-overlay"></div>
 

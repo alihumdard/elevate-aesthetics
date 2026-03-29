@@ -38,9 +38,10 @@
 
 /* Hover Effect Added */
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-  background: #fff;
+ background: transparent;
+    transform: none;
+    box-shadow: 0 12px 25px #00000026;
+    border: 1px solid #354B5E;
 }
 
 /* Active card (jab hover ho) */

@@ -290,6 +290,16 @@
   stroke-linejoin: round;
 }
 
+.clr-white-card .why-card-title{
+  color: #fff !important;
+  text-align: left !important;
+}
+.clr-white-card  .why-card-desc{
+  color: #ffffff !important;
+  text-align: left !important;
+}
+
+
 /* Card title */
 .why-card-title {
   color: #354b5e !important;

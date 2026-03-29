@@ -140,9 +140,15 @@ export default function LaserHairRemovalPackages() {
           Skin & Body Treatment Pricing
         </h2>
 
-        <p className="packages-section section-subtitle">
+        <p className="packages-section section-subtitle mb-3">
           Choose single sessions or save with packages.
         </p>
+        <div className="process-cta-wrap mt-0 my-5">
+            <button className="process-cta-btn">
+              Elevate My Glow
+              <span className="cta-circle">→</span>
+            </button>
+          </div>
 
         <div className="row g-4">
           {/* LEFT */}

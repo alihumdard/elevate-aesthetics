@@ -286,19 +286,21 @@
 /* Before / After labels */
 .rr-label-before,
 .rr-label-after {
-  position: absolute;
-  top: 12px;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--rr-dark);
-  background: rgba(255,255,255,0.82);
-  backdrop-filter: blur(3px);
-  padding: 4px 10px;
-  border-radius: 20px;
-  z-index: 4;
-  pointer-events: none;
+     letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--rr-dark);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    z-index: 4;
+    pointer-events: none;
+    background: #FFFFFF99;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 10px;
+    font-weight: 600;
+    position: absolute;
+    top: 12px;
+    border: 1px solid #FFFFFF99;
 }
 
 .rr-label-before { left: 12px; }
