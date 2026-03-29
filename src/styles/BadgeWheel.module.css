@@ -39,7 +39,7 @@
     border-radius: 50px;
     justify-content: left;
     align-items: center;
-    width: 180px;
+    width: 165px;
     height: 40px;
     font-size: 14px;
     font-weight: 300;
@@ -54,5 +54,10 @@
   bottom: -500px;
   width: 350px;
   
+}
+}
+@media only screen and (min-width:1200px) and (max-width:1600px){
+  .wrapper {
+    bottom: -505px !important;
 }
 }

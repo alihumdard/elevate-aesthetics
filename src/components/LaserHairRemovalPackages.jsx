@@ -72,7 +72,7 @@ const womenRows = [
 function PriceTable({ rows }) {
   return (
     <>
-      <div className="tableSpace">
+      <div className="tableSpace tablespace-second">
         <table className="price-table">
           <thead>
             <tr>

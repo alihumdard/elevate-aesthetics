@@ -262,8 +262,13 @@
 }
 
 .why-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+     transform: none;
+    box-shadow: none !important;
+}
+
+.why-card:hover img {
+    transform: scale(1.05);
+    box-shadow: none !important;
 }
 
 /* Icon wrapper */

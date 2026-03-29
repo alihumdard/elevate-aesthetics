@@ -18,6 +18,7 @@
   border-radius: 16px;
   width: 100%;
   height: auto;
+  transition: all 0.5s ease;
 }
 
 .cardWrapper {
@@ -28,14 +29,25 @@
 
 .card {
  background: #e9e4df;
-    border-radius: 14px;
-    padding: 20px 30px;
-    transition: all .3s;
-    box-shadow: 0 4px 12px #949393b8;
+ border-radius: 14px;
+ padding: 20px 30px;
+ transition: all .3s ease;
+ box-shadow: 0 4px 12px #949393b8;
+ cursor: pointer;
 }
 
+/* Hover Effect Added */
 .card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  background: #fff;
+}
+
+/* Active card (jab hover ho) */
+.card.active {
+  background: #fff;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
 .card h5 {
