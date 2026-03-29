@@ -527,12 +527,17 @@
   .packages-section .section-subtitle {
     margin-bottom: 0px;
     padding-top: 0;
+    padding-bottom: 0;
   }
   .why-section .section-title {
     margin-bottom: 0px;
     font-size: 33px;
     padding: 0;
   }
+  .pkg-sessions2 {
+    
+    font-size: 12px;
+}
   .why-section {
     padding: 40px 0 50px;
   }
@@ -557,13 +562,13 @@
     font-size: 12px;
   }
   .pkg-price {
-    font-size: 13px;
+    font-size: 12px;
   }
   .pkg-sessions {
-    font-size: 11px;
+    font-size: 10px;
   }
   .pkg-old {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 
@@ -598,5 +603,8 @@
 }
 .why-section .section-subtitle{
   padding-bottom: 0px;
+}
+.tablespace-second {
+    padding: 18px 10px !important;
 }
 }
