@@ -1,6 +1,21 @@
 "use client";
 
 import "../styles/process.css";
+import { motion } from "framer-motion";
+
+
+const fadeUp = (delay = 0) => ({
+  hidden: { opacity: 0, y: 60 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { 
+      duration: 0.6, 
+      ease: "easeOut",
+      delay: delay
+    },
+  },
+});
 
 /* ─────────────────────────────────────
    DATA
@@ -62,12 +77,16 @@ function CurvedArrow({ flip = false }) {
 ───────────────────────────────────── */
 export default function Process() {
   return (
-    <div className="process-wrapper">
+    <div className="process-wrapper" >
       {/* ══════════════════════════════════
           SECTION 1 — SIMPLE PROCESS
       ══════════════════════════════════ */}
-      <section className="process-section">
-        <div className="container CustomContainer">
+      <section className="process-section" id="LHR">
+        <motion.div className="container CustomContainer"
+         variants={fadeUp(.6)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
           {/* Heading */}
           <h2 className="process-section section-title">
             Simple Process - Visible Results
@@ -113,7 +132,7 @@ export default function Process() {
               <span className="cta-circle">→</span>
             </button>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* ══════════════════════════════════
@@ -122,15 +141,24 @@ export default function Process() {
       <section className="why-choose-section">
         <div className="container CustomContainer">
           {/* Heading */}
-          <h2 className="why-choose-section section-title">
+          <motion.h2 className="why-choose-section section-title" variants={fadeUp(.3)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
             Why Clients Love Elevate Aesthetics?
-          </h2>
-          <p className="why-choose-section section-subtitle">
+          </motion.h2>
+          <motion.p className="why-choose-section section-subtitle" variants={fadeUp(.6)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
             Expert care and advanced treatments you can trust.
-          </p>
+          </motion.p>
 
           {/* 4 Cards */}
-          <div className="why-cards-row">
+          <motion.div className="why-cards-row" variants={fadeUp(.8)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
             {whyCards.map((card) => (
               <div className="why-card  process-card" key={card.title}>
                 <div className="why-card-icon"> <img src={card.icon} alt="" /></div>
@@ -138,7 +166,7 @@ export default function Process() {
                 <p className="why-card-desc">{card.desc}</p>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

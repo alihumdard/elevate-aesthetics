@@ -2,6 +2,21 @@
 
 import { useState } from 'react';
 import styles from '../styles/popular.module.css';
+import { motion } from "framer-motion";
+
+// animation fadeup 
+const fadeUp = (delay = 0) => ({
+  hidden: { opacity: 0, y: 60 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { 
+      duration: 0.6, 
+      ease: "easeOut",
+      delay: delay
+    },
+  },
+});
 
 export default function Popular() {
 
@@ -41,7 +56,10 @@ export default function Popular() {
   ];
 
   return (
-    <section className={styles.popularSection}>
+    <motion.section className={styles.popularSection} variants={fadeUp(.3)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
       <div className="container" style={{ maxWidth: "1200px", margin: "auto" }}>
         
         {/* Heading */}
@@ -52,7 +70,10 @@ export default function Popular() {
           </p>
         </div>
 
-        <div className="row align-items-start">
+        <motion.div className="row align-items-start" variants={fadeUp(.6)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
           
           {/* Left Image */}
           <div className="col-lg-6 mb-4 mb-lg-0">
@@ -82,8 +103,8 @@ export default function Popular() {
             </div>
           </div>
 
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

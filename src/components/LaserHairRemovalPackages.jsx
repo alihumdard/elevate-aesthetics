@@ -2,6 +2,22 @@
 
 import React, { useState } from "react";
 import "../styles/HairRemoval.css";
+import { motion } from "framer-motion";
+
+
+// animation fadeup 
+const fadeUp = (delay = 0) => ({
+  hidden: { opacity: 0, y: 60 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { 
+      duration: 0.6, 
+      ease: "easeOut",
+      delay: delay
+    },
+  },
+});
 
 /* DATA */
 
@@ -134,7 +150,10 @@ function Accordion({ label, rows, defaultOpen = false }) {
 
 export default function LaserHairRemovalPackages() {
   return (
-    <section className="packages-section">
+    <motion.section className="packages-section" id="package" variants={fadeUp(.3)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
       <div className="container customContainer">
         <h2 className="packages-section section-title">
           Skin & Body Treatment Pricing
@@ -150,7 +169,10 @@ export default function LaserHairRemovalPackages() {
             </button>
           </div>
 
-        <div className="row g-4">
+        <motion.div className="row g-4"  variants={fadeUp(.7)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
           {/* LEFT */}
           <div className="col-lg-6 col-12">
             <div className="packages-left">
@@ -172,8 +194,8 @@ export default function LaserHairRemovalPackages() {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

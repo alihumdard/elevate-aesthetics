@@ -1,6 +1,21 @@
 "use client";
 
 import "../styles/HairRemoval.css";
+import { motion } from "framer-motion";
+
+// animation fadeup 
+const fadeUp = (delay = 0) => ({
+  hidden: { opacity: 0, y: 60 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { 
+      duration: 0.6, 
+      ease: "easeOut",
+      delay: delay
+    },
+  },
+});
 
 const whyCards = {
   left: {
@@ -49,7 +64,10 @@ function WhyCard({ card }) {
 
 export default function WhyChooseLaserHairRemoval() {
   return (
-    <section className="why-section">
+    <motion.section className="why-section"  variants={fadeUp(.3)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
       <div className="container customContainer">
         <h2 className="why-section section-title">
           Why Choose Our Skin & Body Treatments?
@@ -61,20 +79,29 @@ export default function WhyChooseLaserHairRemoval() {
         </p>
 
         <div className="why-grid">
-          <div className="why-col-left">
+          <motion.div className="why-col-left"  variants={fadeUp(.5)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
             <WhyCard card={whyCards.left} />
-          </div>
+          </motion.div>
 
-          <div className="why-col-center">
+          <motion.div className="why-col-center"  variants={fadeUp(1)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
             <WhyCard card={whyCards.centerTop} />
             <WhyCard card={whyCards.centerBottom} />
-          </div>
+          </motion.div>
 
-          <div className="why-col-right">
+          <motion.div className="why-col-right"  variants={fadeUp(1.5)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
             <WhyCard card={whyCards.right} />
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
