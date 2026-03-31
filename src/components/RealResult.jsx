@@ -2,6 +2,22 @@
 
 import { useState, useRef, useCallback, useEffect } from 'react';
 import '../styles/RealResult.css';
+import { motion } from "framer-motion";
+
+
+// animation fadeup 
+const fadeUp = (delay = 0) => ({
+  hidden: { opacity: 0, y: 60 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { 
+      duration: 0.6, 
+      ease: "easeOut",
+      delay: delay
+    },
+  },
+});
 
 /* ─────────────────────────────────────
    GALLERY SLIDE DATA
@@ -206,7 +222,7 @@ function GalleryNavigator() {
       </div>
 
       {/* Navigation: arrow ← progress dots → arrow */}
-      <div className="rr-nav">
+      {/* <div className="rr-nav">
         <button
           className="rr-nav-arrow"
           onClick={goPrev}
@@ -233,7 +249,7 @@ function GalleryNavigator() {
         >
           →
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }
@@ -249,7 +265,10 @@ export default function RealResult() {
           SECTION 1 — YOUR FIRST TREATMENT
       ══════════════════════════════════ */}
       <div className="rr-hero-outer">
-        <div className="rr-hero">
+        <motion.div className="rr-hero"  variants={fadeUp(.2)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
           {/* Background image */}
           <img
             className="rr-hero-img"
@@ -260,37 +279,52 @@ export default function RealResult() {
 
           {/* Content */}
           <div className="rr-hero-content">
-            <h2 className="rr-hero-title">Your First Treatment On Us</h2>
-            <p className="rr-hero-sub">
+            <motion.h2 className="rr-hero-title"  variants={fadeUp(.4)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>Your First Treatment On Us</motion.h2>
+            <motion.p className="rr-hero-sub"  variants={fadeUp(.6)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
               Experience laser hair removal with zero commitment.<br />
               <b>Body areas starting under $60.</b>
-            </p>
+            </motion.p>
 
             {/* Buttons */}
             <div className="rr-hero-btns">
               {/* Teal pill */}
                
-               <div className="process-cta-wrap">
-            <button className="process-cta-btn glow-btn">
+               <motion.div className="process-cta-wrap" variants={fadeUp(.8)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
+            <button className="process-cta-btn glow-btn" >
               Elevate My Glow
               <span className="cta-circle">→</span>
             </button>
-          </div>
+          </motion.div>
 
               {/* Phone outline pill */}
-              <button className="rr-btn-outline">
-                📞 (818) 855-8405
-              </button>
+              <motion.button className="rr-btn-outline" variants={fadeUp(.8)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
+                📞 (818) 855-8403
+              </motion.button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* ══════════════════════════════════
           SECTION 2 — REAL RESULTS
       ══════════════════════════════════ */}
-      <section className="rr-results">
-        <div className="container CustomContainer">
+      <section className="rr-results" id="Result">
+        <motion.div className="container CustomContainer" variants={fadeUp(.3)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
 
           {/* Heading */}
           <h2 className="rr-results-title">Real Results, Real Patients</h2>
@@ -299,7 +333,10 @@ export default function RealResult() {
           </p>
 
           {/* Two-column grid */}
-          <div className="rr-results-grid">
+          <motion.div className="rr-results-grid" variants={fadeUp(.8)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
 
             {/* LEFT — draggable before/after slider */}
             <BeforeAfterSlider />
@@ -307,8 +344,8 @@ export default function RealResult() {
             {/* RIGHT — navigable 2×2 gallery */}
             <GalleryNavigator />
 
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
 
     </div>

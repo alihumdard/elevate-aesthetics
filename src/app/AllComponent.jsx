@@ -17,7 +17,11 @@ import Footer from "@/components/footer";
 export default function ElevateAesthetics() {
   return (
     <>
-      <TopBanner />
+      <TopBanner title ={
+        <>
+         <b>FREE FIRST TREATMENT </b> FOR ANY AREAA UNDER $60
+        </>
+      } />
       <Navbar />
       <Hero
         title="Smooth Skin. No More Shaving."

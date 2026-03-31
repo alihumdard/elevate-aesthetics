@@ -257,8 +257,8 @@
   max-width: 265px;
   padding: 24px 22px 24px;
   position: absolute;
-  top: 20%;
-  left: 8%;
+  top: 15%;
+  left: 12%;
   box-shadow: 0 4px 24px #00000047;
   border: 3px solid #FFFFFF9C;
 }
@@ -326,7 +326,20 @@
 }
 
 .gt-closed {
-  color: rgba(255, 100, 100, 0.8) !important;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+    color: #000 !important;
+    float: right;
+}
+.gt-closed::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #DE3716;
+  display: inline-block;
+  margin-right: 6px;
+  border-radius: 50%;
 }
 
 /* Get Directions button */

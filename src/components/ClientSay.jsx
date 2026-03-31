@@ -2,6 +2,25 @@
 
 import { useState } from 'react';
 import '../styles/ClientSay.css';
+import { motion } from "framer-motion";
+
+
+/* ─────────────────────────────────────
+   ANIMATION VARIANTS
+───────────────────────────────────── */
+
+const fadeUp = (delay = 0) => ({
+  hidden: { opacity: 0, y: 60 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { 
+      duration: 0.6, 
+      ease: "easeOut",
+      delay: delay
+    },
+  },
+});
 
 /* ─────────────────────────────────────
    REVIEWS DATA
@@ -118,7 +137,10 @@ function FaqItem({ faq }) {
   const [open, setOpen] = useState(faq.defaultOpen);
 
   return (
-    <div className={`cs-faq-item ${open ? 'cs-faq-open' : ''}`}>
+    <motion.div className={`cs-faq-item ${open ? 'cs-faq-open' : ''}`}  variants={fadeUp(.4)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
       <div
         className="cs-faq-header"
         onClick={() => setOpen((o) => !o)}
@@ -135,7 +157,7 @@ function FaqItem({ faq }) {
           {faq.answer}
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }
 
@@ -150,7 +172,10 @@ export default function ClientSay() {
           SECTION 1 — WHAT OUR CLIENTS SAY
       ══════════════════════════════════ */}
       <section className="cs-reviews-section">
-        <div className="container CustomContainer">
+        <motion.div className="container CustomContainer"  variants={fadeUp(.3)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
 
           {/* Heading */}
           <h2 className="cs-section-title">What Our Clients Say</h2>
@@ -162,7 +187,10 @@ export default function ClientSay() {
           <div className="cs-reviews-layout">
 
             {/* LEFT — image with rating */}
-            <div className="cs-img-col">
+            <motion.div className="cs-img-col"  variants={fadeUp(.4)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
               <img
                 className="cs-hero-img"
                 src="/images/client-say.png"
@@ -178,24 +206,30 @@ export default function ClientSay() {
                 />
                 <div className="cs-rating-label">Clients Rating</div>
               </div>
-            </div>
+            </motion.div>
 
             {/* RIGHT — 2×2 review cards */}
-            <div className="cs-cards-grid">
+            <motion.div className="cs-cards-grid"  variants={fadeUp(.8)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
               {reviews.map((review) => (
                 <ReviewCard key={review.id} review={review} />
               ))}
-            </div>
+            </motion.div>
 
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* ══════════════════════════════════
           SECTION 2 — FAQ ACCORDION
       ══════════════════════════════════ */}
-      <section className="cs-faq-section">
-        <div className="container CustomContainer">
+      <section className="cs-faq-section" id="FAQ">
+        <motion.div className="container CustomContainer" variants={fadeUp(.3)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }} >
 
           {/* Heading */}
           <h2 className="cs-section-title">Laser Hair Removal FAQ</h2>
@@ -210,7 +244,7 @@ export default function ClientSay() {
             ))}
           </div>
 
-        </div>
+        </motion.div>
       </section>
 
     </div>

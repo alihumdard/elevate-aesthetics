@@ -19,7 +19,11 @@ import WhyChooseLaserHairRemoval from '@/components/WhyChooseLaserHairRemoval';
 export default function ElevateAesthetics() {
   return (
     <>
-      <TopBanner />
+      <TopBanner title ={
+        <>
+         <b> $450 OFF </b> Morpheus8 Body Package
+        </>
+      }/>
       <Navbar />
       <Hero
              title="Advanced Skin & Body Treatments for Real Results"

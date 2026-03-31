@@ -2,7 +2,52 @@
 
 import { useState } from 'react';
 import '../styles/GetTouch.css';
+import { motion } from "framer-motion";
 
+
+
+/* ─────────────────────────────────────
+   ANIMATION VARIANTS
+───────────────────────────────────── */
+
+const fadeUp = (delay = 0) => ({
+  hidden: { opacity: 0, y: 60 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { 
+      duration: 0.6, 
+      ease: "easeOut",
+      delay: delay
+    },
+  },
+});
+
+const fadeLeft = (delay = 0) => ({
+  hidden: { opacity: 0, x: -60 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { 
+      duration: 0.6, 
+      ease: "easeOut",
+      delay: delay
+    },
+  },
+});
+
+const fadeRight = (delay = 0) => ({
+  hidden: { opacity: 0, x: 60 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { 
+      duration: 0.6, 
+      ease: "easeOut",
+      delay: delay
+    },
+  },
+});
 /* ─────────────────────────────────────
    OPENING HOURS DATA
 ───────────────────────────────────── */
@@ -50,18 +95,27 @@ export default function GetTouch({
       {/* ══════════════════════════════════
           SECTION 1 — GET IN TOUCH (FORM)
       ══════════════════════════════════ */}
-      <section className="gt-contact-section">
+      <section className="gt-contact-section" id="get-touch">
         <div className="container">
           <div className="gt-contact-layout">
 
             {/* ── LEFT: Title + Form ── */}
-            <div className="gt-form-col">
-              <h2 className="gt-title">Get In Touch</h2>
-              <p className="gt-subtitle">
+            <div className="gt-form-col" >
+              <motion.h2 className="gt-title"  variants={fadeUp(.2)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>Get In Touch</motion.h2>
+              <motion.p className="gt-subtitle"  variants={fadeUp(.4)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
                 Book your consultation or send us a message.
-              </p>
+              </motion.p>
 
-              <form className="gt-form" onSubmit={handleSubmit}>
+              <motion.form className="gt-form" onSubmit={handleSubmit}  variants={fadeLeft(.8)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
 
                 {/* Row 1: First Name + Last Name */}
                 <div className="gt-row">
@@ -145,11 +199,14 @@ export default function GetTouch({
                   <span className="gt-send-arrow">➤</span>
                 </button>
 
-              </form>
+              </motion.form>
             </div>
 
             {/* ── RIGHT: Image + Inquiry Card ── */}
-            <div className="gt-right-col">
+            <motion.div className="gt-right-col"  variants={fadeRight(.10)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
 
               {/* Rounded photo */}
               <img
@@ -171,7 +228,7 @@ export default function GetTouch({
                 </div>
               </div>
 
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -179,8 +236,11 @@ export default function GetTouch({
       {/* ══════════════════════════════════
           SECTION 2 — MAP WITH OVERLAY
       ══════════════════════════════════ */}
-      <section className="gt-map-section">
-
+      <motion.section className="gt-map-section"  variants={fadeUp(.3)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
+        <div className="container h-100">
         {/* Google Maps iframe */}
         <iframe
           className="gt-map-iframe"
@@ -228,7 +288,8 @@ export default function GetTouch({
           </a>
 
         </div>
-      </section>
+</div>
+      </motion.section>
 
     </div>
   );

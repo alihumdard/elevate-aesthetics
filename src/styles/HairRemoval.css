@@ -608,3 +608,13 @@
     padding: 18px 10px !important;
 }
 }
+
+.accord-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.accord-body.open {
+  max-height: 2000px;
+}

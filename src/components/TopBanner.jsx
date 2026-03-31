@@ -1,9 +1,11 @@
 import styles from "@/styles/TopBanner.module.css";
 
-export default function TopBanner() {
+export default function TopBanner({
+  title
+}) {
   return (
     <div className={styles.banner}>
-      <b> $450 OFF </b> Morpheus8 Body Package
+     {title}
     </div>
   );
 }

@@ -13,7 +13,7 @@
   width: 100%;
   height: 100%;
   position: relative;
-  animation: rotateWheel 50s linear infinite;
+  animation: rotateWheel 30s linear infinite;
 }
 
 @keyframes rotateWheel {

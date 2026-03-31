@@ -2,7 +2,22 @@
 
 import { useState } from "react";
 import "../styles/footer.css";
+import { motion } from "framer-motion";
 
+
+// animation 
+const fadeUp = (delay = 0) => ({
+  hidden: { opacity: 0, y: 60 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { 
+      duration: 0.6, 
+      ease: "easeOut",
+      delay: delay
+    },
+  },
+});
 /* ─────────────────────────────────────
    DATA
 ───────────────────────────────────── */
@@ -73,7 +88,10 @@ export default function Footer({ letterImg }) {
       {/* ══════════════════════════════════
           NEWSLETTER — STAY IN THE LOOP
       ══════════════════════════════════ */}
-      <div className="ft-newsletter">
+      <motion.div className="ft-newsletter"  variants={fadeUp(.2)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
         {/* Background image */}
         <img
           className="ft-newsletter-bg"
@@ -86,15 +104,24 @@ export default function Footer({ letterImg }) {
 
         {/* Frosted glass card */}
         <div className="ft-newsletter-card">
-          <h3 className="ft-newsletter-title">Stay In The Loop</h3>
-          <p className="ft-newsletter-sub">
+          <motion.h3 className="ft-newsletter-title"  variants={fadeUp(.3)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>Stay In The Loop</motion.h3>
+          <motion.p className="ft-newsletter-sub"  variants={fadeUp(.5)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
             Get updates on new treatments, promotions, and clinic news.
-          </p>
+          </motion.p>
 
-          <form
+          <motion.form
             className="ft-newsletter-form"
             onSubmit={handleNewsletterSubmit}
-          >
+            variants={fadeUp(.8)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
             <input
               className="ft-newsletter-input"
               type="email"
@@ -107,18 +134,21 @@ export default function Footer({ letterImg }) {
               Send
               <span className="ft-send-arrow">➤</span>
             </button>
-          </form>
+          </motion.form>
         </div>
-      </div>
+      </motion.div>
 
       {/* ══════════════════════════════════
           MAIN FOOTER
       ══════════════════════════════════ */}
-      <footer className="ft-footer">
+      <footer className="ft-footer" >
         <div className="container">
-          <div className="ft-footer-grid">
+          <div className="ft-footer-grid"  >
             {/* ── Col 1: Logo + Social ── */}
-            <div className="ft-col-brand">
+            <motion.div className="ft-col-brand" variants={fadeUp(.5)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
               <img src="/images/footer-logo.png" alt="" />
 
               <div className="ft-follow-label mt-5">Follow Us</div>
@@ -133,10 +163,13 @@ export default function Footer({ letterImg }) {
                   <IconX />
                 </a>
               </div>
-            </div>
+            </motion.div>
 
             {/* ── Col 2: Contact Info ── */}
-            <div className="ft-col-contact">
+            <motion.div className="ft-col-contact" variants={fadeUp(.5)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
               <div className="ft-col-title">Contact Info</div>
               <div className="ft-contact-list">
                 {contactItems.map((item, i) => (
@@ -146,10 +179,13 @@ export default function Footer({ letterImg }) {
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
 
             {/* ── Col 3: Links ── */}
-            <div className="ft-col-links">
+            <motion.div className="ft-col-links" variants={fadeUp(.5)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
               <div className="ft-col-title">Links</div>
               <div className="ft-links-list">
                 {navLinks.map((link) => (
@@ -158,10 +194,14 @@ export default function Footer({ letterImg }) {
                   </a>
                 ))}
               </div>
-            </div>
+            </motion.div>
 
             {/* ── Col 4: Legal ── */}
-            <div className="ft-col-legal">
+            <motion.div className="ft-col-legal" 
+            variants={fadeUp(.5)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}>
               <div className="ft-col-title">Legal</div>
               <div className="ft-legal-list">
                 {legalLinks.map((link) => (
@@ -170,7 +210,7 @@ export default function Footer({ letterImg }) {
                   </a>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
 

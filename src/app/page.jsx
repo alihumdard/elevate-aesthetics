@@ -1,13 +1,11 @@
-'use client';
+"use client";
 
-import AllComponent from './AllComponent'
-/* ══════════════════════════════════════
-   MAIN PAGE EXPORT
-══════════════════════════════════════ */
+import AllComponent from "./AllComponent";
+
 export default function ElevateAesthetics() {
   return (
     <main>
-    <AllComponent />
+      <AllComponent />
     </main>
   );
 }

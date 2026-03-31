@@ -24,6 +24,8 @@
   font-family: var(--rr-font-sans);
   background: var(--rr-page-bg);
   color: var(--rr-dark);
+  max-width: 1320px;
+  margin: auto;
 }
 
 /* ─────────────────────────────────────
