@@ -247,7 +247,7 @@ export default function ClientSay() {
       {/* ══════════════════════════════════
           SECTION 2 — FAQ ACCORDION
       ══════════════════════════════════ */}
-      <motion.section className="cs-faq-section" variants={fadeUp(.3)}
+      <motion.section className="cs-faq-section" id="FAQ" variants={fadeUp(.3)}
   initial="hidden"
   whileInView="visible"
   viewport={{ once: true }}>

@@ -306,7 +306,7 @@ export default function RealResult() {
 
               {/* Phone outline pill */}
               <button className="rr-btn-outline">
-                📞 (818) 855-8405
+                📞 (818) 855-8403
               </button>
             </motion.div>
           </div>
@@ -316,7 +316,7 @@ export default function RealResult() {
       {/* ══════════════════════════════════
           SECTION 2 — REAL RESULTS
       ══════════════════════════════════ */}
-      <section className="rr-results">
+      <section className="rr-results" id="Result">
         <motion.div className="container CustomContainer" variants={fadeUp(.3)}
   initial="hidden"
   whileInView="visible"
