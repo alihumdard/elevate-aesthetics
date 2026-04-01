@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import "../styles/HairRemoval.css";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 
 // animation fadeup 
@@ -163,10 +164,12 @@ export default function LaserHairRemovalPackages() {
           Choose single sessions or save with packages.
         </p>
         <div className="process-cta-wrap mt-0 my-5">
+          <Link href="https://www.joinblvd.com/b/elevate-aesthetics/widget#/visit-type" target="_blank">
             <button className="process-cta-btn">
               Elevate My Glow
               <span className="cta-circle">→</span>
             </button>
+            </Link>
           </div>
 
         <motion.div className="row g-4"  variants={fadeUp(.7)}

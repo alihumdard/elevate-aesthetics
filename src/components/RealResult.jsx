@@ -1,20 +1,20 @@
-'use client';
+"use client";
 
-import { useState, useRef, useCallback, useEffect } from 'react';
-import '../styles/RealResult.css';
+import { useState, useRef, useCallback, useEffect } from "react";
+import "../styles/RealResult.css";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
-
-// animation fadeup 
+// animation fadeup
 const fadeUp = (delay = 0) => ({
   hidden: { opacity: 0, y: 60 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { 
-      duration: 0.6, 
+    transition: {
+      duration: 0.6,
       ease: "easeOut",
-      delay: delay
+      delay: delay,
     },
   },
 });
@@ -27,58 +27,58 @@ const gallerySlides = [
   // Slide 1
   [
     {
-      src: '/images/arm.png',
-      alt: 'Result 1',
+      src: "/images/arm.png",
+      alt: "Result 1",
     },
     {
-      src: '/images/hair.png',
-      alt: 'Result 2',
+      src: "/images/hair.png",
+      alt: "Result 2",
     },
     {
-      src: '/images/lip.png',
-      alt: 'Result 3',
+      src: "/images/lip.png",
+      alt: "Result 3",
     },
     {
-      src: '/images/leg.png',
-      alt: 'Result 4',
+      src: "/images/leg.png",
+      alt: "Result 4",
     },
   ],
   // Slide 2
   [
     {
-      src: 'https://images.unsplash.com/photo-1523263685509-57c1d050d19b?w=400&q=80&auto=format&fit=crop',
-      alt: 'Result 5',
+      src: "https://images.unsplash.com/photo-1523263685509-57c1d050d19b?w=400&q=80&auto=format&fit=crop",
+      alt: "Result 5",
     },
     {
-      src: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&q=80&auto=format&fit=crop',
-      alt: 'Result 6',
+      src: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&q=80&auto=format&fit=crop",
+      alt: "Result 6",
     },
     {
-      src: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=400&q=80&auto=format&fit=crop',
-      alt: 'Result 7',
+      src: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=400&q=80&auto=format&fit=crop",
+      alt: "Result 7",
     },
     {
-      src: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=400&q=80&auto=format&fit=crop',
-      alt: 'Result 8',
+      src: "https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=400&q=80&auto=format&fit=crop",
+      alt: "Result 8",
     },
   ],
   // Slide 3
   [
     {
-      src: 'https://images.unsplash.com/photo-1509551388413-e18d0ac0d543?w=400&q=80&auto=format&fit=crop',
-      alt: 'Result 9',
+      src: "https://images.unsplash.com/photo-1509551388413-e18d0ac0d543?w=400&q=80&auto=format&fit=crop",
+      alt: "Result 9",
     },
     {
-      src: 'https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=400&q=80&auto=format&fit=crop',
-      alt: 'Result 10',
+      src: "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=400&q=80&auto=format&fit=crop",
+      alt: "Result 10",
     },
     {
-      src: 'https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=400&q=80&auto=format&fit=crop',
-      alt: 'Result 11',
+      src: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=400&q=80&auto=format&fit=crop",
+      alt: "Result 11",
     },
     {
-      src: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&q=80&auto=format&fit=crop',
-      alt: 'Result 12',
+      src: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&q=80&auto=format&fit=crop",
+      alt: "Result 12",
     },
   ],
 ];
@@ -107,29 +107,33 @@ function BeforeAfterSlider() {
   };
 
   const onMouseMove = useCallback(
-    (e) => { if (dragging.current) updatePosition(e.clientX); },
-    [updatePosition]
+    (e) => {
+      if (dragging.current) updatePosition(e.clientX);
+    },
+    [updatePosition],
   );
 
-  const onMouseUp = useCallback(() => { dragging.current = false; }, []);
+  const onMouseUp = useCallback(() => {
+    dragging.current = false;
+  }, []);
 
   const onTouchMove = useCallback(
     (e) => {
       if (dragging.current) updatePosition(e.touches[0].clientX);
     },
-    [updatePosition]
+    [updatePosition],
   );
 
   useEffect(() => {
-    window.addEventListener('mousemove', onMouseMove);
-    window.addEventListener('mouseup', onMouseUp);
-    window.addEventListener('touchmove', onTouchMove);
-    window.addEventListener('touchend', onMouseUp);
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("mouseup", onMouseUp);
+    window.addEventListener("touchmove", onTouchMove);
+    window.addEventListener("touchend", onMouseUp);
     return () => {
-      window.removeEventListener('mousemove', onMouseMove);
-      window.removeEventListener('mouseup', onMouseUp);
-      window.removeEventListener('touchmove', onTouchMove);
-      window.removeEventListener('touchend', onMouseUp);
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("mouseup", onMouseUp);
+      window.removeEventListener("touchmove", onTouchMove);
+      window.removeEventListener("touchend", onMouseUp);
     };
   }, [onMouseMove, onMouseUp, onTouchMove]);
 
@@ -145,10 +149,7 @@ function BeforeAfterSlider() {
     >
       {/* BEFORE image (full) */}
       <div className="rr-slider-before">
-        <img
-          src="/images/legs_after.png "
-          alt="Before"
-        />
+        <img src="/images/legs_after.png " alt="Before" />
       </div>
 
       {/* AFTER image (clipped) */}
@@ -156,10 +157,7 @@ function BeforeAfterSlider() {
         className="rr-slider-after"
         style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
       >
-        <img
-          src="/images/legs_before.png"
-          alt="After"
-        />
+        <img src="/images/legs_before.png" alt="After" />
       </div>
 
       {/* Labels */}
@@ -167,21 +165,15 @@ function BeforeAfterSlider() {
       <span className="rr-label-after">After</span>
 
       {/* Divider line */}
-      <div
-        className="rr-slider-line"
-        style={{ left: `${position}%` }}
-      />
+      <div className="rr-slider-line" style={{ left: `${position}%` }} />
 
       {/* Drag handle */}
-      <div
-  className="rr-slider-handle"
-  style={{ left: `${position}%` }}
->
-  <span className="rr-handle-arrows">
-    <img src="/images/left.png" alt="left" className="arrow-left" />
-    <img src="/images/right.png" alt="right" className="arrow-right" />
-  </span>
-</div>
+      <div className="rr-slider-handle" style={{ left: `${position}%` }}>
+        <span className="rr-handle-arrows">
+          <img src="/images/left.png" alt="left" className="arrow-left" />
+          <img src="/images/right.png" alt="right" className="arrow-right" />
+        </span>
+      </div>
     </div>
   );
 }
@@ -214,7 +206,7 @@ function GalleryNavigator() {
         {images.map((img, i) => (
           <img
             key={`${current}-${i}`}
-            className={`rr-gallery-img ${fading ? 'rr-fade-out' : 'rr-fade-in'}`}
+            className={`rr-gallery-img ${fading ? "rr-fade-out" : "rr-fade-in"}`}
             src={img.src}
             alt={img.alt}
           />
@@ -260,15 +252,17 @@ function GalleryNavigator() {
 export default function RealResult() {
   return (
     <div className="rr-wrapper">
-
       {/* ══════════════════════════════════
           SECTION 1 — YOUR FIRST TREATMENT
       ══════════════════════════════════ */}
       <div className="rr-hero-outer">
-        <motion.div className="rr-hero"  variants={fadeUp(.2)}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}>
+        <motion.div
+          className="rr-hero"
+          variants={fadeUp(0.2)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {/* Background image */}
           <img
             className="rr-hero-img"
@@ -279,39 +273,62 @@ export default function RealResult() {
 
           {/* Content */}
           <div className="rr-hero-content">
-            <motion.h2 className="rr-hero-title"  variants={fadeUp(.4)}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}>Your First Treatment On Us</motion.h2>
-            <motion.p className="rr-hero-sub"  variants={fadeUp(.6)}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}>
-              Experience laser hair removal with zero commitment.<br />
+            <motion.h2
+              className="rr-hero-title"
+              variants={fadeUp(0.4)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              Your First Treatment On Us
+            </motion.h2>
+            <motion.p
+              className="rr-hero-sub"
+              variants={fadeUp(0.6)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              Experience laser hair removal with zero commitment.
+              <br />
               <b>Body areas starting under $60.</b>
             </motion.p>
 
             {/* Buttons */}
             <div className="rr-hero-btns">
               {/* Teal pill */}
-               
-               <motion.div className="process-cta-wrap" variants={fadeUp(.8)}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}>
-            <button className="process-cta-btn glow-btn" >
-              Elevate My Glow
-              <span className="cta-circle">→</span>
-            </button>
-          </motion.div>
+
+              <motion.div
+                className="process-cta-wrap"
+                variants={fadeUp(0.8)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                <Link
+                  href="https://www.joinblvd.com/b/elevate-aesthetics/widget#/visit-type"
+                  target="_blank"
+                >
+                  <button className="process-cta-btn glow-btn">
+                    Elevate My Glow
+                    <span className="cta-circle">→</span>
+                  </button>
+                </Link>
+              </motion.div>
 
               {/* Phone outline pill */}
-              <motion.button className="rr-btn-outline" variants={fadeUp(.8)}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}>
+              <Link  href="tel:818855-8403" 
+  target="_blank" >
+              <motion.button
+                className="rr-btn-outline"
+                variants={fadeUp(0.8)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
                 📞 (818) 855-8403
               </motion.button>
+              </Link>
             </div>
           </div>
         </motion.div>
@@ -321,11 +338,13 @@ export default function RealResult() {
           SECTION 2 — REAL RESULTS
       ══════════════════════════════════ */}
       <section className="rr-results" id="Result">
-        <motion.div className="container CustomContainer" variants={fadeUp(.3)}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}>
-
+        <motion.div
+          className="container CustomContainer"
+          variants={fadeUp(0.3)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {/* Heading */}
           <h2 className="rr-results-title">Real Results, Real Patients</h2>
           <p className="rr-results-sub">
@@ -333,21 +352,21 @@ export default function RealResult() {
           </p>
 
           {/* Two-column grid */}
-          <motion.div className="rr-results-grid" variants={fadeUp(.8)}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}>
-
+          <motion.div
+            className="rr-results-grid"
+            variants={fadeUp(0.8)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             {/* LEFT — draggable before/after slider */}
             <BeforeAfterSlider />
 
             {/* RIGHT — navigable 2×2 gallery */}
             <GalleryNavigator />
-
           </motion.div>
         </motion.div>
       </section>
-
     </div>
   );
 }

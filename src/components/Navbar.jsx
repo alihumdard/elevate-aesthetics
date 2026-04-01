@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "@/styles/Navbar.module.css";
+import Link from "next/link";
 
 const navLinks = [
   { label: "How LHR Works", href: "#LHR" },
@@ -34,19 +35,21 @@ export default function Navbar() {
         ))}
 
         <li>
-          <button className={styles.bookBtn}>
-            <span className="cta-circle">
-              <span className="cta-bg"></span>
-              <span className="arrow">→</span>
-            </span>
-            Book FREE Session
-          </button>
+          <Link href="https://www.joinblvd.com/b/elevate-aesthetics/widget#/visit-type" target="_blank">
+            <button className={styles.bookBtn}>
+              <span className="cta-circle">
+                <span className="cta-bg"></span>
+                <span className="arrow">→</span>
+              </span>
+              Book FREE Session
+            </button>
+          </Link>
         </li>
       </ul>
 
       {/* Right side */}
       <div className={styles.right}>
-        <span className={styles.searchIcon}>⌕</span>
+        {/* <span className={styles.searchIcon}>⌕</span> */}
 
         <span
           className={styles.hamburger}

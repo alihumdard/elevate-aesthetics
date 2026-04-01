@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import "../styles/HairRemoval.css";
+import Link from "next/link";
 
 /* ─────────────────────────────────────
    ANIMATION VARIANTS
@@ -429,7 +430,7 @@ const currentImage =
     <div className="hair-removal-wrapper">
       {/* Packages Section */}
 
-      <section className="packages-section" id="PACKAGE">
+      <section className="packages-section" id="package">
         <div className="container customContainer">
           <motion.h2
             className="section-title"
@@ -473,7 +474,7 @@ const currentImage =
         isOpen={activeTab === "men"}
         onToggle={() => setActiveTab(activeTab === "men" ? null : "men")}
       />
-
+       <Link href="https://www.joinblvd.com/b/elevate-aesthetics/widget#/visit-type" target="_blank">
       <button className="cta-btn mt-3">
         Book Your Free Treatment Now
         <span className="cta-circle big-cta">
@@ -481,6 +482,7 @@ const currentImage =
           <span className="arrow">→</span>
         </span>
       </button>
+      </Link>
     </motion.div>
   </div>
 

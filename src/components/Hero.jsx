@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import styles from "@/styles/Hero.module.css";
 import BadgeWheel from "./BadgeWheel";
+import Link from "next/link";
 
 export default function Hero({ title, subtitle, bgImage, buttonText, curveImage="/images/curve.png" }) {
 
@@ -41,6 +42,7 @@ export default function Hero({ title, subtitle, bgImage, buttonText, curveImage=
 
           <div className={styles.curveContainer}>
             <img className={styles.curveBg} src={curveImage} alt="curve background" />
+           <Link href="https://www.joinblvd.com/b/elevate-aesthetics/widget#/visit-type" target="_blank">
             <button id="book-id" className={styles.bookNowBtn}>
               <span id="cta-circle-clr" className="cta-circle cta-circle-clr">
                 <span className="cta-bg"></span>
@@ -48,6 +50,7 @@ export default function Hero({ title, subtitle, bgImage, buttonText, curveImage=
               </span>
               <span className="btn-clor">{buttonText}</span>
             </button>
+             </Link>
           </div>
 
           <BadgeWheel />

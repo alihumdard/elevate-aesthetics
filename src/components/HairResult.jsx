@@ -3,6 +3,7 @@
 import { useState, useRef, useCallback, useEffect } from 'react';
 import '../styles/RealResult.css';
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 // animation fadeup 
 const fadeUp = (delay = 0) => ({
@@ -298,16 +299,24 @@ export default function RealResult() {
               {/* Teal pill */}
                
                <div className="process-cta-wrap">
+                 <Link
+                  href="https://www.joinblvd.com/b/elevate-aesthetics/widget#/visit-type"
+                  target="_blank"
+                >
             <button className="process-cta-btn glow-btn">
               Start Your Glow
               <span className="cta-circle">→</span>
             </button>
+            </Link>
           </div>
 
               {/* Phone outline pill */}
+               <Link  href="tel:818855-8403" 
+  target="_blank" >
               <button className="rr-btn-outline">
                 📞 (818) 855-8403
               </button>
+              </Link>
             </motion.div>
           </div>
         </motion.div>

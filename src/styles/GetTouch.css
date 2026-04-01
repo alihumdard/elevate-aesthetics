@@ -244,6 +244,7 @@
   display: block;
   box-shadow: 0px 0px 16px 0 #00000033;
   border-radius: 12px;
+  position: relative;
 }
 
 /* Semi-transparent overlay card on left */

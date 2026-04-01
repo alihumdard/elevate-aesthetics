@@ -2,7 +2,7 @@
 
 import "../styles/process.css";
 import { motion } from "framer-motion";
-
+import Link from "next/link";
 
 const fadeUp = (delay = 0) => ({
   hidden: { opacity: 0, y: 60 },
@@ -127,10 +127,12 @@ export default function Process() {
 
           {/* Book FREE Session button */}
           <div className="process-cta-wrap">
+             <Link href="https://www.joinblvd.com/b/elevate-aesthetics/widget#/visit-type" target="_blank">
             <button className="process-cta-btn">
               Book FREE Consult
               <span className="cta-circle">→</span>
             </button>
+            </Link>
           </div>
         </motion.div>
       </section>

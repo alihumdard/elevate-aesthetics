@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import '../styles/process.css';
+import "../styles/process.css";
 import { motion } from "framer-motion";
-
+import Link from "next/link";
 
 const fadeUp = (delay = 0) => ({
   hidden: { opacity: 0, y: 60 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { 
-      duration: 0.6, 
+    transition: {
+      duration: 0.6,
       ease: "easeOut",
-      delay: delay
+      delay: delay,
     },
   },
 });
@@ -21,42 +21,42 @@ const fadeUp = (delay = 0) => ({
 ───────────────────────────────────── */
 const steps = [
   {
-    number: '1',
-    label: 'Consultation',
-    desc: 'Our specialists assess your skin type and hair to create a personalized treatment plan.',
+    number: "1",
+    label: "Consultation",
+    desc: "Our specialists assess your skin type and hair to create a personalized treatment plan.",
   },
   {
-    number: '2',
-    label: 'Laser Treatment',
-    desc: 'The laser targets hair follicles to stop future hair growth while protecting surrounding skin.',
+    number: "2",
+    label: "Laser Treatment",
+    desc: "The laser targets hair follicles to stop future hair growth while protecting surrounding skin.",
   },
   {
-    number: '3',
-    label: 'Gradual Hair Reduction',
-    desc: 'With each session, hair becomes thinner and grows back more slowly.',
+    number: "3",
+    label: "Gradual Hair Reduction",
+    desc: "With each session, hair becomes thinner and grows back more slowly.",
   },
 ];
 
 const whyCards = [
   {
-    title: 'Experienced Specialists',
-    desc: 'Our trained professionals ensure safe and precise treatments.',
-    icon:  '/images/card-icon1.png',
+    title: "Experienced Specialists",
+    desc: "Our trained professionals ensure safe and precise treatments.",
+    icon: "/images/card-icon1.png",
   },
   {
-    title: 'Modern Technology',
-    desc: 'We use advanced laser systems designed for effective and comfortable treatments.',
-     icon:  '/images/card-icon3.png',
+    title: "Modern Technology",
+    desc: "We use advanced laser systems designed for effective and comfortable treatments.",
+    icon: "/images/card-icon3.png",
   },
   {
-    title: 'Personalized Care',
-    desc: 'Every treatment plan is customized for your skin and hair type.',
-     icon:  '/images/card-icon4.png',
+    title: "Personalized Care",
+    desc: "Every treatment plan is customized for your skin and hair type.",
+    icon: "/images/card-icon4.png",
   },
   {
-    title: 'Medical Oversight',
-    desc: 'Treatments are performed under professional medical supervision for maximum safety.',
-    icon:  '/images/card-icon2.png',
+    title: "Medical Oversight",
+    desc: "Treatments are performed under professional medical supervision for maximum safety.",
+    icon: "/images/card-icon2.png",
   },
 ];
 
@@ -66,7 +66,7 @@ const whyCards = [
 function CurvedArrow({ flip = false }) {
   return (
     <div className="step-arrow">
-       <img src="/images/curve-arrow.png" alt="" />
+      <img src="/images/curve-arrow.png" alt="" />
     </div>
   );
 }
@@ -77,28 +77,28 @@ function CurvedArrow({ flip = false }) {
 export default function Process() {
   return (
     <div className="process-wrapper">
-
       {/* ══════════════════════════════════
           SECTION 1 — SIMPLE PROCESS
       ══════════════════════════════════ */}
       <section className="process-section" id="LHR">
-        <motion.div className="container CustomContainer"
-         variants={fadeUp(.6)}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }} >
-
+        <motion.div
+          className="container CustomContainer"
+          variants={fadeUp(0.6)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {/* Heading */}
           <h2 className="process-section section-title">
             Simple Process - Visible Results
           </h2>
           <p className="process-section section-subtitle">
-            Laser energy targets hair follicles to reduce unwanted hair and reveal smoother skin.
+            Laser energy targets hair follicles to reduce unwanted hair and
+            reveal smoother skin.
           </p>
 
           {/* 3 Steps with curved arrows */}
           <div className="steps-row">
-
             {/* Step 1 */}
             <div className="step">
               <div className="step-number">1</div>
@@ -125,17 +125,17 @@ export default function Process() {
               <div className="step-label">Gradual Hair Reduction</div>
               <p className="step-desc">{steps[2].desc}</p>
             </div>
-
           </div>
 
           {/* Book FREE Session button */}
           <div className="process-cta-wrap">
+             <Link href="https://www.joinblvd.com/b/elevate-aesthetics/widget#/visit-type" target="_blank">
             <button className="process-cta-btn">
               Book FREE Session
               <span className="cta-circle">→</span>
             </button>
+            </Link>
           </div>
-
         </motion.div>
       </section>
 
@@ -144,27 +144,37 @@ export default function Process() {
       ══════════════════════════════════ */}
       <section className="why-choose-section">
         <div className="container CustomContainer">
-
           {/* Heading */}
-          <motion.h2 className="why-choose-section section-title" variants={fadeUp(.3)}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}>
-            Why Choose Elevate Aesthetics<br />
+          <motion.h2
+            className="why-choose-section section-title"
+            variants={fadeUp(0.3)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            Why Choose Elevate Aesthetics
+            <br />
             for Laser Hair Removal?
           </motion.h2>
-          <motion.p className="why-choose-section section-subtitle" variants={fadeUp(.6)}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}>
-            Expert care, advanced technology, and personalized treatments designed for the best results.
+          <motion.p
+            className="why-choose-section section-subtitle"
+            variants={fadeUp(0.6)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            Expert care, advanced technology, and personalized treatments
+            designed for the best results.
           </motion.p>
 
           {/* 4 Cards */}
-          <motion.div className="why-cards-row" variants={fadeUp(.8)}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}>
+          <motion.div
+            className="why-cards-row"
+            variants={fadeUp(0.8)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             {whyCards.map((card) => (
               <div className="why-card process-card" key={card.title}>
                 <div className="why-card-icon">
@@ -175,10 +185,8 @@ export default function Process() {
               </div>
             ))}
           </motion.div>
-
         </div>
       </section>
-
     </div>
   );
 }

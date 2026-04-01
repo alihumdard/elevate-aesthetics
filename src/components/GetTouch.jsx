@@ -240,7 +240,7 @@ export default function GetTouch({
   initial="hidden"
   whileInView="visible"
   viewport={{ once: true }}>
-        <div className="container h-100">
+        <div className="container h-100 position-relative">
         {/* Google Maps iframe */}
         <iframe
           className="gt-map-iframe"

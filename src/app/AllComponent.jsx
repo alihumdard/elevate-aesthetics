@@ -19,7 +19,7 @@ export default function ElevateAesthetics() {
     <>
       <TopBanner title ={
         <>
-         <b>FREE FIRST TREATMENT </b> FOR ANY AREAA UNDER $60
+         <b>FREE FIRST TREATMENT </b> FOR ANY AREA UNDER $60
         </>
       } />
       <Navbar />
