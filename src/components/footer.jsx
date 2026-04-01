@@ -171,9 +171,9 @@ export default function Footer({ letterImg }) {
                 <a href="https://www.facebook.com/p/Elevate-Aesthetics-100083137218742/" className="ft-social-icon" aria-label="Facebook">
                   <IconFacebook />
                 </a>
-                <a href="#" className="ft-social-icon" aria-label="X (Twitter)">
+                {/* <a href="#" className="ft-social-icon" aria-label="X (Twitter)">
                   <IconX />
-                </a>
+                </a> */}
               </div>
             </motion.div>
 
