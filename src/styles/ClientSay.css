@@ -7,20 +7,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap');
 
 :root {
-  --cs-white:       #ffffff;
-  --cs-page-bg:     #f0ece6;
-  --cs-reviews-bg:  #f7f4f0;
-  --cs-faq-bg:      #c8b89a;
-  --cs-dark:        #1a1a1a;
-  --cs-muted:       #888888;
-  --cs-muted2:      #aaaaaa;
-  --cs-teal:        #3b4a47;
-  --cs-teal-dark:   #2a3634;
-  --cs-gold:        #e2a832;
-  --cs-card-bg:     #ffffff;
-  --cs-border:      #e8e2da;
-  --cs-font-serif:  'Playfair Display', Georgia, serif;
-  --cs-font-sans:   'Jost', sans-serif;
+  --cs-white: #ffffff;
+  --cs-page-bg: #f0ece6;
+  --cs-reviews-bg: #f7f4f0;
+  --cs-faq-bg: #c8b89a;
+  --cs-dark: #1a1a1a;
+  --cs-muted: #888888;
+  --cs-muted2: #aaaaaa;
+  --cs-teal: #3b4a47;
+  --cs-teal-dark: #2a3634;
+  --cs-gold: #e2a832;
+  --cs-card-bg: #ffffff;
+  --cs-border: #e8e2da;
+  --cs-font-serif: 'Playfair Display', Georgia, serif;
+  --cs-font-sans: 'Jost', sans-serif;
 }
 
 /* ─────────────────────────────────────
@@ -34,19 +34,19 @@
 /* Shared section heading styles */
 .cs-section-title {
   font-family: 'GFS Didot';
-    text-align: center;
-    color: var(--cs-dark);
-    margin-bottom: 8px;
-    font-weight: 600;
-    letter-spacing: 1px;
+  text-align: center;
+  color: var(--cs-dark);
+  margin-bottom: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .cs-section-sub {
   text-align: center;
-    color: #000;
-    margin-bottom: 0;
-    font-size: 18px;
-    font-weight: 400;
+  color: #000;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 /* ═══════════════════════════════════════
@@ -54,7 +54,7 @@
 ═══════════════════════════════════════ */
 .cs-reviews-section {
   background: none;
-    padding: 25px 0 58px;
+  padding: 25px 0 58px;
 }
 
 .cs-reviews-section .cs-section-title {
@@ -77,9 +77,9 @@
 /* ── LEFT: image with rating overlay ── */
 .cs-img-col {
   border-radius: 18px;
-    min-height: 450px;
-    position: relative;
-    overflow: hidden;
+  min-height: 450px;
+  position: relative;
+  overflow: hidden;
 }
 
 .cs-hero-img {
@@ -94,32 +94,30 @@
 .cs-img-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(10, 8, 5, 0.72) 0%,
-    rgba(10, 8, 5, 0.08) 55%,
-    transparent 100%
-  );
+  background: linear-gradient(to top,
+      rgba(10, 8, 5, 0.72) 0%,
+      rgba(10, 8, 5, 0.08) 55%,
+      transparent 100%);
 }
 
 /* Rating block at bottom */
 .cs-rating-block {
-     z-index: 2;
-    position: absolute;
-    bottom: 30px;
-    left: 16px;
-    background: #B4937957;
-    padding: 18px 30px;
-    border-radius: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #ffffff;
-    border: 2px solid #FFFFFF29;
-        width: 80%;
+  z-index: 2;
+  position: absolute;
+  bottom: 30px;
+  left: 16px;
+  background: #B4937957;
+  padding: 18px 30px;
+  border-radius: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  border: 2px solid #FFFFFF29;
+  width: 80%;
 }
 
 .cs-rating-score {
@@ -139,7 +137,7 @@
 
 .cs-star {
   font-size: 14px;
-     color: #fff;
+  color: #fff;
 }
 
 .cs-rating-label {
@@ -159,13 +157,13 @@
 
 .cs-review-card {
   background: #E9E4DF;
-    border-radius: 10px;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 18px 22px 16px;
-    transition: box-shadow .2s;
-    display: flex;
-    box-shadow: 0px 0px 32px 0px #00000033 !important;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 18px 22px 16px;
+  transition: box-shadow .2s;
+  display: flex;
+  box-shadow: 0px 0px 32px 0px #00000033 !important;
 }
 
 .cs-review-card:hover {
@@ -175,12 +173,12 @@
 /* Review text */
 .cs-review-text {
   color: #000000;
-    flex: 1;
-    margin-bottom: 16px;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.72;
+  flex: 1;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.72;
 }
 
 /* Quote mark */
@@ -220,23 +218,34 @@
 
 /* Avatar circle */
 .cs-avatar {
- width: 45px;
-    height: 45px;
-    color: var(--cs-white);
-    text-transform: uppercase;
-    border-radius: 50%;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    font-weight: 300;
-    display: flex;
+  width: 45px;
+  height: 45px;
+  color: var(--cs-white);
+  text-transform: uppercase;
+  border-radius: 50%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 300;
+  display: flex;
 }
 
-.cs-avatar-m { background: #7F9AA8;}
-.cs-avatar-k {background: #7F9AA8; }
-.cs-avatar-kb{ background: #7F9AA8;}
-.cs-avatar-l {background: #7F9AA8; }
+.cs-avatar-m {
+  background: #7F9AA8;
+}
+
+.cs-avatar-k {
+  background: #7F9AA8;
+}
+
+.cs-avatar-kb {
+  background: #7F9AA8;
+}
+
+.cs-avatar-l {
+  background: #7F9AA8;
+}
 
 .cs-reviewer-info {
   display: flex;
@@ -245,16 +254,16 @@
 }
 
 .cs-reviewer-name {
- color: #000000;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.2;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 .cs-reviewer-date {
   color: #7F9AA8;
-    font-size: 13px;
-    font-weight: 300;
+  font-size: 13px;
+  font-weight: 300;
 }
 
 /* Star rating on card */
@@ -265,29 +274,29 @@
 
 .cs-card-star {
   color: #E2A53B;
-    font-size: 20px;
+  font-size: 20px;
 }
 
 /* ═══════════════════════════════════════
    SECTION 2 — FAQ ACCORDION
 ═══════════════════════════════════════ */
 .cs-faq-section {
- background: #CFC4B7;
-    padding: 30px 0 30px;
+  background: #CFC4B7;
+  padding: 30px 0 30px;
 }
 
 .cs-faq-section .cs-section-title {
- margin-bottom: 10px;
-    font-size: 42px;
-    color: #000000;
+  margin-bottom: 10px;
+  font-size: 42px;
+  color: #000000;
 }
 
 .cs-faq-section .cs-section-sub {
   text-align: center;
-    color: #000000 !important;
-    margin-bottom: 40px;
-    font-size: 18px;
-    font-weight: 400;
+  color: #000000 !important;
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 /* Accordion list */
@@ -304,7 +313,7 @@
   background: #E9E4DF;
   border-radius: 6px;
   overflow: hidden;
- box-shadow: 0px 0px 18px 0px #0000001A;
+  box-shadow: 0px 0px 18px 0px #0000001A;
 }
 
 /* FAQ header row */
@@ -319,14 +328,14 @@
   gap: 16px;
 }
 
- 
+
 
 .cs-faq-question {
   color: #000000;
-    flex: 1;
-    font-size: 18px;
-        font-weight: 600;
-    line-height: 1.4;
+  flex: 1;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 /* Circle +/− toggle button */
@@ -350,29 +359,37 @@
 /* Open state: dark filled circle with white minus */
 .cs-faq-item.cs-faq-open .cs-faq-toggle {
   background: #354B5E;
-    color: var(--cs-white);
-    border-color: #354B5E;
+  color: var(--cs-white);
+  border-color: #354B5E;
 }
 
 /* FAQ answer body */
 .cs-faq-body {
- color: #000000;
-    border-top: 1px solid var(--cs-border);
-    padding: 14px 20px 16px;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.75;
-    animation: .22s csFadeIn;
+  color: #000000;
+  border-top: 1px solid var(--cs-border);
+  padding: 14px 20px 16px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.75;
+  animation: .22s csFadeIn;
 }
-.CustomContainer{
+
+.CustomContainer {
   max-width: 1320px !important;
   margin: auto;
   padding: 30px;
 }
 
 @keyframes csFadeIn {
-  from { opacity: 0; transform: translateY(-4px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ─────────────────────────────────────
@@ -388,14 +405,22 @@
   .cs-reviews-layout {
     grid-template-columns: 1fr;
   }
+
   .cs-img-col {
     min-height: 220px;
   }
+
   .cs-cards-grid {
     grid-template-columns: 1fr;
   }
-  .cs-reviews-section { padding: 42px 0 50px; }
-  .cs-faq-section     { padding: 42px 0 50px; }
+
+  .cs-reviews-section {
+    padding: 42px 0 50px;
+  }
+
+  .cs-faq-section {
+    padding: 42px 0 50px;
+  }
 }
 
 @media (max-width: 480px) {
