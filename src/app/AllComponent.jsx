@@ -28,6 +28,7 @@ export default function ElevateAesthetics() {
         subtitle="Advanced laser hair removal for long-lasting results, smooth skin, and confidence every day."
         bgImage="/images/banner-image.jpg"
         buttonText="Book Now"
+        badgeType="default"
       />
       <FreeSession
   title="Your First Session On Us!"
@@ -40,7 +41,7 @@ export default function ElevateAesthetics() {
       <HairRemoval />
       <Process />
       <RealResult />
-      <ClientSay />
+      <ClientSay  />
       <GetTouch  intouch = "/images/touch.png"/>
       <Footer  letterImg = "/images/in-loop.png"/>
     </>

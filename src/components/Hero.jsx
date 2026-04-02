@@ -5,7 +5,7 @@ import styles from "@/styles/Hero.module.css";
 import BadgeWheel from "./BadgeWheel";
 import Link from "next/link";
 
-export default function Hero({ title, subtitle, bgImage, buttonText, curveImage="/images/curve.png" }) {
+export default function Hero({ badgeType, title, subtitle, bgImage, buttonText, curveImage="/images/curve.png" }) {
 
   const fadeUp = (delay = 0) => ({
     hidden: { opacity: 0, y: 60 },
@@ -53,7 +53,7 @@ export default function Hero({ title, subtitle, bgImage, buttonText, curveImage=
              </Link>
           </div>
 
-          <BadgeWheel />
+          <BadgeWheel type={badgeType} />
         </section>
       </div>
     </div>

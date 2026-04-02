@@ -20,28 +20,28 @@ const fadeUp = (delay = 0) => ({
 const whyCards = {
   left: {
     src: "/images/skin-treat1.png",
-    icon: "/images/left-icon.svg",
+    icon: "/images/second-left.svg",
     title: "Visible Results",
     desc: "See noticeable improvements in your skin and body after just a few sessions.",
   },
 
   centerTop: {
     src: "/images/laser-removal-center-top.png",
-    icon: "/images/center-top.png",
+    icon: "/images/second-top.svg",
     title: "Advanced Technology",
     desc: "We use modern, clinically proven devices for safe and effective treatments.",
   },
 
   centerBottom: {
     src: "/images/skinn-treat3.png",
-    icon: "/images/center-bottom.png",
+    icon: "/images/second-bottom.svg",
     title: "Customized Treatments",
     desc: "Every treatment is tailored to your skin type and goals.",
   },
 
   right: {
     src: "/images/skin-treat2.png",
-    icon: "/images/right-icon.png",
+    icon: "/images/second-right.svg",
     title: "Minimal Downtime",
     desc: "Most treatments require little to no recovery time.",
   },

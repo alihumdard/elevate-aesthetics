@@ -21,45 +21,58 @@ const fadeUp = (delay = 0) => ({
 export default function Popular() {
 
   const [activeImage, setActiveImage] = useState("/images/popular.png");
+  const [overlayImage, setOverlayImage] = useState("");
+  const [activeTitle, setActiveTitle] = useState("");
+  const [isHover, setIsHover] = useState(false);
 
   const treatments = [
     {
       title: "Morpheus8",
       desc: "Deep skin remodeling treatment that improves texture, tightness, and overall skin quality.",
-      image: "/images/effect1.png"
+      image: "/images/effect1.png",
+      overlay: "/images/over1.png"
     },
     {
       title: "Microneedling with PRF",
       desc: "Stimulates collagen production and enhances skin rejuvenation naturally.",
-      image: "/images/effect2.png"
+      image: "/images/effect2.png",
+      overlay: "/images/over2.png"
     },
     {
       title: "Dermapeel",
       desc: "Medical-grade chemical peel for smoother, brighter skin.",
-      image: "/images/effect3.png"
+      image: "/images/effect3.png",
+      overlay: "/images/over3.png"
     },
     {
       title: "PRF Injections",
       desc: "Promotes skin regeneration and natural volume restoration.",
-      image: "/images/effect4.png"
+      image: "/images/effect4.png",
+      overlay: "/images/over4.png"
     },
     {
       title: "PRF Hair Restoration",
       desc: "Supports hair growth and strengthens hair follicles.",
-      image: "/images/effect5.png"
+      image: "/images/effect5.png",
+      overlay: "/images/over5.png"
     },
     {
       title: "Emsculpt NEO",
       desc: "Build muscle and reduce fat with non-invasive body contouring.",
-      image: "/images/effect6.png"
+      image: "/images/effect6.png",
+      overlay: "/images/over6.png"
     }
   ];
 
   return (
-    <motion.section className={styles.popularSection} variants={fadeUp(.3)}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}>
+    <motion.section 
+      id="treatment" 
+      className={styles.popularSection} 
+      variants={fadeUp(.3)}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
       <div className="container" style={{ maxWidth: "1200px", margin: "auto" }}>
         
         {/* Heading */}
@@ -70,19 +83,31 @@ export default function Popular() {
           </p>
         </div>
 
-        <motion.div className="row align-items-start" variants={fadeUp(.6)}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}>
+        <motion.div 
+          className="row align-items-start" 
+          variants={fadeUp(.6)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           
           {/* Left Image */}
           <div className="col-lg-6 mb-4 mb-lg-0">
             <div className={styles.imageWrapper}>
+              
               <img
                 src={activeImage}
                 alt="popular"
                 className={`img-fluid ${styles.smoothImage}`}
               />
+
+              {isHover && (
+                <div className={`${styles.overlay} d-flex align-items-center gap-2`}>
+                  <img src={overlayImage} alt="" />
+                  <span>{activeTitle}</span>
+                </div>
+              )}
+
             </div>
           </div>
 
@@ -93,8 +118,16 @@ export default function Popular() {
                 <div 
                   key={index} 
                   className={styles.card}
-                  onMouseEnter={() => setActiveImage(item.image)}
-                  onMouseLeave={() => setActiveImage("/images/popular.png")}
+                  onMouseEnter={() => {
+                    setActiveImage(item.image);
+                    setOverlayImage(item.overlay);
+                    setActiveTitle(item.title);
+                    setIsHover(true);
+                  }}
+                  onMouseLeave={() => {
+                    setActiveImage("/images/popular.png");
+                    setIsHover(false);
+                  }}
                 >
                   <h5>{item.title}</h5>
                   <p>{item.desc}</p>

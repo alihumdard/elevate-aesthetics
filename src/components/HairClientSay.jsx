@@ -32,8 +32,7 @@ const reviews = [
   },
   {
     id: 2,
-    text: "“Every treatment I’ve had has left my skin glowing and healthier than ever. They truly take the time to understand your skin and tailor everything to your needs.”",
-    name: "Kristine Adamian",
+    text: "Every treatment I’ve had has left my skin glowing and healthier than ever. They truly take the time to understand your skin and tailor everything to your needs.",    name: "Kristine Adamian",
     date: "a year ago",
     initial: "K",
     avatarClass: "cs-avatar-k",
@@ -41,7 +40,7 @@ const reviews = [
   },
   {
     id: 3,
-    text: "“I’ve had multiple treatments and I always leave feeling refreshed and more confident. The results are amazing and very natural.”",
+    text: "I’ve had multiple treatments and I always leave feeling refreshed and more confident. The results are amazing and very natural.",
     name: "Deana Giudenian",
     date: "a year ago",
     initial: "D",
@@ -50,7 +49,7 @@ const reviews = [
   },
   {
     id: 4,
-    text: "“Great service and result! I did three Morpheus sessions and felt really well taken care of.”",
+    text: "Great service and result! I did three Morpheus sessions and felt really well taken care of.",
     name: "Natacha S.",
     date: "a year ago",
     initial: "N",
@@ -190,7 +189,7 @@ function FaqItem({ faq }) {
 /* ─────────────────────────────────────
    MAIN COMPONENT — ClientSay
 ───────────────────────────────────── */
-export default function ClientSay() {
+export default function ClientSay( ) {
   return (
     <div className="cs-wrapper">
       {/* ══════════════════════════════════
@@ -253,9 +252,9 @@ export default function ClientSay() {
   viewport={{ once: true }}>
         <div className="container CustomContainer">
           {/* Heading */}
-          <h2 className="cs-section-title">Laser Hair Removal FAQ</h2>
+          <h2 className="cs-section-title">Skin & Body Treatments FAQ</h2>
           <p className="cs-section-sub">
-            Answers to the most common questions about laser hair removal.
+           Answers to common questions about our treatments.
           </p>
 
           {/* FAQ accordion list */}

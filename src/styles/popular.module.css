@@ -87,3 +87,30 @@
   }
   
 }
+
+.imageWrapper {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  max-width: 90%;
+  margin: auto;
+  padding: 18px 15px;
+  background: #b4937957;
+  border: 2px solid #FFFFFF17;
+  color: #fff;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.overlay img {
+  width: 24px !important;
+  height: 24px !important;
+  object-fit: contain;
+}
+
+ 

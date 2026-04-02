@@ -24,12 +24,14 @@ export default function ElevateAesthetics() {
          <b> $450 OFF </b> Morpheus8 Body Package
         </>
       }/>
-      <Navbar />
+      <Navbar  firstLabel="Treatments"
+  firstHref="#treatment"/>
       <Hero
              title="Advanced Skin & Body Treatments for Real Results"
              subtitle="From microneedling to body sculpting, discover personalized treatments designed to improve your skin, restore confidence, and deliver visible results."
              bgImage="/images/skin-banner.jpg"
              buttonText="Book Now"
+             badgeType="second"
            />
      <FreeSession
              title="Big Glow-up With Bigger Savings!"

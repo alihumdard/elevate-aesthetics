@@ -394,7 +394,7 @@
 }
 .why-col-right .why-card .why-card-icon {
   width: 25px !important;
-  height: 32px !important;
+  height: auto !important;
 }
 .why-col-center .why-card .why-card-icon {
   width: 25px !important;
@@ -479,7 +479,7 @@
 }
 
 .why-card-title {
-  font-family: var(--font-serif);
+     font-family: 'GFS Didot' !important;
   font-size: 15px;
   font-weight: 600;
   color: #fff;

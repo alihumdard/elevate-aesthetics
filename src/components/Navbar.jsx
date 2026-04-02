@@ -4,16 +4,16 @@ import { useState } from "react";
 import styles from "@/styles/Navbar.module.css";
 import Link from "next/link";
 
-const navLinks = [
-  { label: "How LHR Works", href: "#LHR" },
-  { label: "Packages", href: "#package" },
-  { label: "Results", href: "#Result" },
-  { label: "FAQ", href: "#FAQ" },
-  { label: "Contact", href: "#get-touch" },
-];
-
-export default function Navbar() {
+export default function Navbar({ firstLabel, firstHref }) {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const navLinks = [
+    { label: firstLabel || "How LHR Works", href: firstHref || "#LHR" },  
+    { label: "Packages", href: "#package" },
+    { label: "Results", href: "#Result" },
+    { label: "FAQ", href: "#FAQ" },
+    { label: "Contact", href: "#get-touch" },
+  ];
 
   return (
     <nav className={styles.nav}>
@@ -35,7 +35,10 @@ export default function Navbar() {
         ))}
 
         <li>
-          <Link href="https://www.joinblvd.com/b/elevate-aesthetics/widget#/visit-type" target="_blank">
+          <Link
+            href="https://www.joinblvd.com/b/elevate-aesthetics/widget#/visit-type"
+            target="_blank"
+          >
             <button className={styles.bookBtn}>
               <span className="cta-circle">
                 <span className="cta-bg"></span>
@@ -49,8 +52,6 @@ export default function Navbar() {
 
       {/* Right side */}
       <div className={styles.right}>
-        {/* <span className={styles.searchIcon}>⌕</span> */}
-
         <span
           className={styles.hamburger}
           onClick={() => setMenuOpen(!menuOpen)}

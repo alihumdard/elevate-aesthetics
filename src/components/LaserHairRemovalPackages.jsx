@@ -5,17 +5,16 @@ import "../styles/HairRemoval.css";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-
-// animation fadeup 
+// animation fadeup
 const fadeUp = (delay = 0) => ({
   hidden: { opacity: 0, y: 60 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { 
-      duration: 0.6, 
+    transition: {
+      duration: 0.6,
       ease: "easeOut",
-      delay: delay
+      delay: delay,
     },
   },
 });
@@ -25,22 +24,25 @@ const fadeUp = (delay = 0) => ({
 const womenRows = [
   {
     area: "Morpheus8 Full Face",
+     image: "/images/table4.png",
     single: "$700",
-    singleText: "$750", // Naya content add kiya
+    singleText: "$750",
     pkg: "$1950",
     sessions: "3 Sessions",
     old: "$2250",
   },
   {
     area: "Morpheus8 Body",
+    image: "/images/table4.png",
     single: "$600",
-    singleText: "$700", // Naya content add kiya
+    singleText: "$700",
     pkg: "$1650",
     sessions: "3 sessions",
     old: "$2100",
   },
   {
     area: "Microneedling with PRF",
+    image: "/images/table4.png",
     single: "$500",
     singleText: "$550", // Naya content add kiya
     pkg: "$1350",
@@ -49,6 +51,7 @@ const womenRows = [
   },
   {
     area: "Dermapeel",
+    image: "/images/table4.png",
     single: "$350",
     pkg: "$900",
     sessions: "3 sessions",
@@ -102,7 +105,18 @@ function PriceTable({ rows }) {
           <tbody>
             {rows.map((r) => (
               <tr key={r.area}>
-                <td>{r.area}</td>
+                <td className="d-flex">
+                  <span className="pe-2">{r.area}</span>
+                  <div className="d-flex align-items-center gap-2">
+                    {r.image && (
+                      <img
+                        src={r.image}
+                        alt=""
+                        style={{ width: "14px", height: "auto" }}
+                      />
+                    )}
+                  </div>
+                </td>
 
                 {/* Yahan sirf content change kiya hai, aapki purani Bootstrap classes use ki hain taake design na badle */}
                 <td className="td-single">
@@ -151,10 +165,14 @@ function Accordion({ label, rows, defaultOpen = false }) {
 
 export default function LaserHairRemovalPackages() {
   return (
-    <motion.section className="packages-section" id="package" variants={fadeUp(.3)}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}>
+    <motion.section
+      className="packages-section"
+      id="package"
+      variants={fadeUp(0.3)}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
       <div className="container customContainer">
         <h2 className="packages-section section-title">
           Skin & Body Treatment Pricing
@@ -164,18 +182,24 @@ export default function LaserHairRemovalPackages() {
           Choose single sessions or save with packages.
         </p>
         <div className="process-cta-wrap mt-0 my-5">
-          <Link href="https://www.joinblvd.com/b/elevate-aesthetics/widget#/visit-type" target="_blank">
+          <Link
+            href="https://www.joinblvd.com/b/elevate-aesthetics/widget#/visit-type"
+            target="_blank"
+          >
             <button className="process-cta-btn">
               Elevate My Glow
               <span className="cta-circle">→</span>
             </button>
-            </Link>
-          </div>
+          </Link>
+        </div>
 
-        <motion.div className="row g-4"  variants={fadeUp(.7)}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}>
+        <motion.div
+          className="row g-4"
+          variants={fadeUp(0.7)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {/* LEFT */}
           <div className="col-lg-6 col-12">
             <div className="packages-left">

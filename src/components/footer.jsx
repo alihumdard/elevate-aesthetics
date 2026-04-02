@@ -25,7 +25,7 @@ const contactItems = [
   {
     icon: "/images/location.png",
     text: "509 1/2 E. Broadway, Glendale, CA 91205",
-    href : "https://www.google.com/maps?q=509+1/2+E.+Broadway,+Glendale,+CA+91205",
+    href : "https://maps.app.goo.gl/e9KyPRDA6dJdKmH77 ",
   },
   {
     icon: "/images/phone.png",
@@ -40,11 +40,11 @@ const contactItems = [
 ];
 
 const navLinks = [
-  { label: "How LHR Works", href: "#" },
-  { label: "Packages", href: "#" },
-  { label: "Results", href: "#" },
-  { label: "FAQ", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "How LHR Works", href: "#LHR" },
+  { label: "Packages", href: "#package" },
+  { label: "Results", href: "#Result" },
+  { label: "FAQ", href: "#FAQ" },
+  { label: "Contact", href: "#get-touch" },
 ];
 
 const legalLinks = [
