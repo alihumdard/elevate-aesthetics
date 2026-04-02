@@ -4,13 +4,10 @@
 }
 
 .title {
+  font-size: 36px;
+  font-weight: 500;
   margin-bottom: 10px;
-    font-size: 48px;
-    font-weight: 700;
-    font-family: 'GFS Didot';
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-align: center;
+   font-family: 'GFS Didot';
 }
 
 .subtitle {
@@ -104,15 +101,21 @@
   max-width: 90%;
   margin: auto;
   padding: 18px 15px;
-  background: #FFFFFF29;
-  border: 2px solid #FFFFFF17;
+
+  background: rgba(255, 255, 255, 0.16); /* <-- proper transparent background */
+  border: 2px solid rgba(255, 255, 255, 0.09);
+
   color: #fff;
   justify-content: center;
   border-radius: 12px;
   font-weight: 500;
   font-family: "GFS Didot", serif;
-   backdrop-filter: blur(12.5px); /* <-- yaha blur apply ho rha hai */
-  -webkit-backdrop-filter: blur(12.5px); /* Safari support */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  backdrop-filter: blur(20.5px);
+  -webkit-backdrop-filter: blur(20.5px);  
 }
 .overlay span{
   font-size: 18px;

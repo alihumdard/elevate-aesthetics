@@ -306,11 +306,13 @@
 .clr-white-card .why-card-title {
   color: #fff !important;
   text-align: left !important;
+  font-size: 24px !important;
 }
 
 .clr-white-card .why-card-desc {
   color: #ffffff !important;
   text-align: left !important;
+  max-width: 60%;
 }
 
 
