@@ -100,11 +100,13 @@
   max-width: 90%;
   margin: auto;
   padding: 18px 15px;
-  background: #b4937957;
+  background: #FFFFFF29;
   border: 2px solid #FFFFFF17;
   color: #fff;
   justify-content: center;
   border-radius: 12px;
+  font-weight: 500;
+  font-family: "GFS Didot", serif;
 }
 
 .overlay img {

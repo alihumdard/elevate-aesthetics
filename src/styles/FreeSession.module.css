@@ -14,12 +14,12 @@
 }
 
 .title {
-  font-family: var(--font-serif);
-    color: #FFFFFF;
-    letter-spacing: .3px;
+ font-family: 'GFS Didot';
+    color: #fff;
+    letter-spacing: normal;
     margin-bottom: 10px;
     font-size: 48px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .subtitle {
@@ -27,12 +27,12 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #CFC4B7;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .subtitle b {
   color: #CFC4B7;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 @media only screen and (max-width:600px)

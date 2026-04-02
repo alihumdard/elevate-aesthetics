@@ -18,6 +18,7 @@ const fadeUp = (delay = 0) => ({
     },
   },
 });
+export default function Footer({ letterImg,  firstLabel, firstHref  }) {
 /* ─────────────────────────────────────
    DATA
 ───────────────────────────────────── */
@@ -40,7 +41,7 @@ const contactItems = [
 ];
 
 const navLinks = [
-  { label: "How LHR Works", href: "#LHR" },
+{ label: firstLabel || "How LHR Works", href: firstHref || "#LHR" },
   { label: "Packages", href: "#package" },
   { label: "Results", href: "#Result" },
   { label: "FAQ", href: "#FAQ" },
@@ -71,7 +72,7 @@ function IconX() {
 /* ─────────────────────────────────────
    MAIN COMPONENT — Footer
 ───────────────────────────────────── */
-export default function Footer({ letterImg }) {
+
   const [email, setEmail] = useState("");
 
   const handleNewsletterSubmit = (e) => {

@@ -507,7 +507,7 @@ const currentImage =
 
       {/* Why Section */}
 
-      <section className="why-section">
+      <section className="why-section mt-5">
         <div className="container customContainer">
           <motion.h2
             className="section-title"
@@ -526,8 +526,7 @@ const currentImage =
             whileInView="visible"
             viewport={{ once: true }}
           >
-            Laser hair removal offers a safe and effective way to reduce
-            unwanted hair.
+           Laser hair removal offers a safe and effective way to reduce unwanted hair and enjoy smoother skin with long-lasting results.
           </motion.p>
 
           <div

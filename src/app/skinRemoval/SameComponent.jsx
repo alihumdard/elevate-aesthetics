@@ -48,7 +48,8 @@ export default function ElevateAesthetics() {
        <HairResult />
       <HairClientSay />
       <GetTouch intouch = "/images/contact.png"/>
-      <Footer  letterImg = "/images/footer.png"/> 
+      <Footer  letterImg = "/images/footer.png" firstLabel="Treatments"
+  firstHref="#treatment"/> 
     </>
   );
 }

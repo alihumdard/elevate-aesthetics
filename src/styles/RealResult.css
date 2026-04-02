@@ -77,7 +77,6 @@
 }
 
 .rr-hero-title {
- font-family: var(--rr-font-serif);
     color: var(--rr-white);
     text-shadow: 0 2px 12px #0000004d;
     margin-bottom: 10px;
@@ -226,9 +225,9 @@
 }
 
 .rr-results-title {
-  font-family: var(--rr-font-serif);
+  font-family: "GFS Didot", serif;
   font-size: clamp(24px, 3vw, 38px);
-  font-weight: 400;
+  font-weight: 600;
   text-align: center;
   color: var(--rr-dark);
   margin-bottom: 10px;

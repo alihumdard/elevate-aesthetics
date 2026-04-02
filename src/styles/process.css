@@ -25,28 +25,32 @@
    SHARED
 ───────────────────────────────────── */
 .process-wrapper {
-  font-family: var(--font-sans);
+  font-family: "GFS Didot", serif;
   color: var(--dark);
 }
+
 .process-card .why-card-icon {
-   width: 25px;
-    height: 25px;
-}
-.process-card{
-  box-shadow: none !important;
-}
-.process-card:hover {
-    transform:none !important;
+  width: 25px;
+  height: 25px;
 }
 
-.process-card .why-card-icon img{
+.process-card {
+  box-shadow: none !important;
+}
+
+.process-card:hover {
+  transform: none !important;
+}
+
+.process-card .why-card-icon img {
   object-fit: contain !important;
   border-radius: 0;
 }
 
 .process-wrapper .section-title {
-  font-family: var(--font-serif);
-  font-weight: 400;
+  font-family: "GFS Didot", serif;
+  font-weight: 600;
+  padding-top: 0;
   text-align: center;
 }
 
@@ -69,17 +73,18 @@
   margin-bottom: 10px;
   font-size: 48px;
 }
-.process-cta-btn:hover .cta-circle{
+
+.process-cta-btn:hover .cta-circle {
   width: 80px !important;
   border-radius: 33px;
 }
 
 .process-section .section-subtitle {
- color: #000;
-    margin-bottom: 52px;
-    padding-top: 0;
-    font-size: 20px;
-    font-weight: 400;
+  color: #000;
+  margin-bottom: 52px;
+  padding-top: 0;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 /* ── Steps row ── */
@@ -95,7 +100,7 @@
 /* Individual step */
 .step {
   flex: 1;
-      max-width: none;
+  max-width: none;
   text-align: center;
   padding: 0 16px;
   position: relative;
@@ -126,27 +131,29 @@
 /* Step description */
 .step-desc {
   color: #000;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.75;
-    max-width: 240px;
-    margin: auto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.75;
+  max-width: 240px;
+  margin: auto;
 }
 
 /* ── Curved arrows between steps ── */
 .step-arrow {
   flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-    width: 75px;
-    padding-top: 8%;
-    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  padding-top: 8%;
+  display: flex;
 }
+
 .CustomContainer {
   max-width: 1320px !important;
   margin: auto;
   padding-bottom: 30px;
 }
+
 /* SVG curved arrow */
 .arrow-svg {
   width: 52px;
@@ -168,7 +175,7 @@
   padding: 10px 32px;
   padding-right: 8px !important;
   font-size: 12px;
-  font-family: var(--font-sans);
+  font-family: "GFS Didot", serif;
   font-weight: 500;
   letter-spacing: 1.2px;
   display: inline-flex;
@@ -199,17 +206,21 @@
   display: flex;
   color: #000;
 }
-#book-id .cta-circle-clr{
+
+#book-id .cta-circle-clr {
   background: #354B5E !important;
   color: #fff !important;
 }
-#book-id .btn-clor{
+
+#book-id .btn-clor {
   color: #354B5E;
 }
+
 .cta-circle:hover {
-     width: 68px;
+  width: 68px;
   border-radius: 40px;
 }
+
 .cta-circle:hover .bookBtn {
   gap: 10px !important;
 }
@@ -231,12 +242,12 @@
 
 .why-choose-section .section-subtitle {
   color: #000;
-  max-width: 740px;
+  max-width: 800px;
   margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
-     font-size: 18px;
-    font-weight: 400;
+  font-size: 18px;
+  font-weight: 400;
   line-height: 1.7;
   padding-top: 0;
 }
@@ -264,13 +275,13 @@
 }
 
 .why-card:hover {
-     transform: none;
-    box-shadow: none !important;
+  transform: none;
+  box-shadow: none !important;
 }
 
 .why-card:hover img {
-    transform: scale(1.05);
-    box-shadow: none !important;
+  transform: scale(1.05);
+  box-shadow: none !important;
 }
 
 /* Icon wrapper */
@@ -292,11 +303,12 @@
   stroke-linejoin: round;
 }
 
-.clr-white-card .why-card-title{
+.clr-white-card .why-card-title {
   color: #fff !important;
   text-align: left !important;
 }
-.clr-white-card  .why-card-desc{
+
+.clr-white-card .why-card-desc {
   color: #ffffff !important;
   text-align: left !important;
 }
@@ -307,20 +319,24 @@
   color: #354b5e !important;
   margin-bottom: 10px;
   font-size: 16px !important;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   line-height: 1.35;
-  font-family: "Manrope", sans-serif !important;
+  font-family: "GFS Didot", serif;
 }
+
 .process-card .why-card-title {
   color: #354b5e !important;
-   font-size: 16px !important;
+  font-size: 16px !important;
   font-weight: 600 !important;
+      font-family: 'Manrope' !important;
 }
-.process-card   .why-card-desc{
+
+.process-card .why-card-desc {
   color: #000000 !important;
   font-size: 14px !important;
   font-weight: 300 !important;
 }
+
 /* Card description */
 .why-card-desc {
   color: #000000 !important;
@@ -349,10 +365,12 @@
   .step {
     max-width: 320px;
   }
+
   .process-section .section-title {
     font-size: 32px;
     padding: 0;
   }
+
   .process-section .section-subtitle {
     padding: 0;
   }
@@ -368,6 +386,7 @@
   .process-section {
     padding: 44px 0 20px;
   }
+
   .why-choose-section {
     padding: 44px 0 52px;
   }
@@ -380,22 +399,25 @@
 }
 
 .process-card .why-card-icon svg {
-    stroke: #354B5E !important;
+  stroke: #354B5E !important;
 }
-.process-card  .why-card-desc {
-    text-align: center;
-    color: #000000;
-    font-size: 16px !important;
-    font-weight: 500 !important;
+
+.process-card .why-card-desc {
+  text-align: center;
+  color: #000000;
+  font-size: 16px !important;
+  font-weight: 500 !important;
 }
+
 @media only screen and (max-width:600px) {
   .why-choose-section .section-title {
-     
+
     font-size: 24px;
     font-weight: 600;
     padding: 0;
-}
-.why-choose-section .section-subtitle {
+  }
+
+  .why-choose-section .section-subtitle {
     padding-bottom: 0px;
-}
+  }
 }
